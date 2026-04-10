@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Aurora from "@/components/backgrounds/Aurora";
 import { ArrowDown, Mail, Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -45,10 +46,16 @@ const HeroSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center section-padding bg-grid overflow-hidden">
-            {/* Glow orbs */}
-            <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
-            <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-primary/3 blur-[100px] pointer-events-none" />
+        <section id="home" className="relative min-h-screen flex items-center section-padding overflow-hidden">
+            <div className="absolute inset-0 z-0 bg-background" aria-hidden />
+            <div className="absolute inset-0 z-[1] min-h-full w-full pointer-events-none">
+                <Aurora
+                    colorStops={["#1e1033", "#6d28d9", "#c4b5fd"]}
+                    amplitude={1.1}
+                    blend={0.52}
+                    speed={0.85}
+                />
+            </div>
 
             <div className="container relative z-10">
                 <div className="grid lg:grid-cols-5 gap-12 items-center">
