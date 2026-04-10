@@ -1,43 +1,42 @@
-export interface Project {
-    name: string;
-    desc: string;
-    tech: string[];
-    type: string;
-    highlight: boolean;
-    githubUrl?: string;
-    liveUrl?: string;
+export interface NavLinkItem {
+  label: string;
+  href: string;
 }
 
-export interface SkillItem {
-    name: string;
-    level: number;
+export interface ProjectItem {
+  name: string;
+  desc: string;
+  tech: string[];
+  type: string;
+  highlight: boolean;
 }
 
-export interface SkillCategory {
-    title: string;
-    skills: SkillItem[];
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  tasks: string[];
 }
 
-export interface Experience {
-    company: string;
-    role: string;
-    period: string;
-    tasks: string[];
+export interface EducationItem {
+  title: string;
+  institution: string;
+  status: string;
 }
 
-export interface Education {
-    title: string;
-    institution: string;
-    status: string;
+export interface CertificationItem {
+  title: string;
+  issuer: string;
+  year: string;
 }
 
-export interface Certification {
-    title: string;
-    issuer: string;
-    year: string;
+export interface AboutHighlight {
+  label: string;
+  desc: string;
 }
 
-export interface NavLink {
-    label: string;
-    href: string;
+export interface TechStackItem {
+  name: string;
+  icon?: string;
+  icons?: string[];
 }

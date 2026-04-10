@@ -1,333 +1,253 @@
 {
-    "nav": {
-        "links": [
-            {
-                "label": "Home",
-                "href": "#home"
-            },
-            {
-                "label": "About",
-                "href": "#about"
-            },
-            {
-                "label": "Projects",
-                "href": "#projects"
-            },
-            {
-                "label": "Skills",
-                "href": "#skills"
-            },
-            {
-                "label": "Experience",
-                "href": "#experience"
-            },
-            {
-                "label": "Education",
-                "href": "#education"
-            },
-            {
-                "label": "Contact",
-                "href": "#contact"
-            }
-        ]
+  "nav": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "Stack",
+        "href": "#skills"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "Education",
+        "href": "#education"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "status": "Open to new opportunities",
+    "title": "I am",
+    "subtitle": "Filipe Maciel",
+    "roles": ["Full Stack Developer", "Backend Developer", "Problem Solver"],
+    "description": "I turn ideas into real systems with <code>Laravel</code>, <code>Python</code>, and <code>PostgreSQL</code>. Two years of production XP, clean code, and hassle-free deploys.",
+    "buttons": {
+      "projects": "View Projects",
+      "contact": "Get in Touch"
     },
-    "hero": {
-        "status": "Open to new opportunities",
-        "title": "I am",
-        "subtitle": "Filipe Maciel",
-        "roles": [
-            "Full Stack Developer",
-            "Backend Developer",
-            "Problem Solver"
-        ],
-        "description": "I turn ideas into real systems with <code>Laravel</code>, <code>Python</code>, and <code>PostgreSQL</code>. Two years of production XP, clean code, and hassle-free deploys.",
-        "buttons": {
-            "projects": "View Projects",
-            "contact": "Get in Touch"
-        },
-        "terminal": {
-            "command": "cat about_me.json",
-            "nameKey": "name",
-            "name": "Filipe Maciel Lopes",
-            "stackKey": "stack",
-            "stack": [
-                "Laravel",
-                "Python",
-                "PostgreSQL"
-            ],
-            "rankKey": "rank",
-            "rank": "Full Stack Dev",
-            "statusKey": "status",
-            "status": "Looking for new quests"
-        }
-    },
-    "about": {
-        "tag": "// about_me",
-        "title": "Who is",
-        "titleHighlight": "Filipe",
-        "bio": [
-            "Hi! I'm <strong>Filipe</strong>, a developer focused on <code>PHP (Laravel)</code> and <code>Python</code>. I have a technical background in IT from <strong>IFRO</strong> (Ji-Paraná campus) and I'm currently studying Systems Analysis and Development (ADS), always seeking to evolve in a constantly changing field.",
-            "I have experience in web development and I am interested in expanding my knowledge to other areas, such as game development, desktop, and mobile applications. In the professional environment, I stand out for my collaborative and leadership profile, supporting and guiding other developers.",
-            "Besides technology, I am interested in sports, pop culture, and language learning — I am currently studying <strong>English</strong> and have started learning <strong>French</strong>.",
-            "I seek professional growth by exploring new technologies and contributing to innovative projects that generate real impact."
-        ],
-        "highlights": [
-            {
-                "label": "Backend",
-                "desc": "Laravel · Django · Flask"
-            },
-            {
-                "label": "Frontend",
-                "desc": "HTML · CSS · JS · Bootstrap"
-            },
-            {
-                "label": "Databases",
-                "desc": "PostgreSQL · SQL"
-            },
-            {
-                "label": "DevOps & More",
-                "desc": "Deploy · APIs · Git · Scraping"
-            }
-        ],
-        "stats": [
-            {
-                "value": "2+",
-                "label": "Years of XP"
-            },
-            {
-                "value": "3+",
-                "label": "Quests completed"
-            },
-            {
-                "value": "∞",
-                "label": "Hours of grind"
-            }
-        ]
-    },
-    "projects": {
-        "tag": "// projects",
-        "title": "What I've",
-        "titleHighlight": "built",
-        "subtitle": "Each project taught me something different. Here are the ones I'm most proud of.",
-        "highlightBadge": "Featured",
-        "githubButton": "More on GitHub",
-        "items": [
-            {
-                "name": "Eficiência Fiscal",
-                "desc": "Complete Laravel system for fiscal management. Integration with Python scripts for automated web scraping, deployment, and production server maintenance.",
-                "tech": [
-                    "Laravel",
-                    "Python",
-                    "PostgreSQL",
-                    "Web Scraping"
-                ],
-                "type": "🏢 Company",
-                "highlight": true
-            },
-            {
-                "name": "Mix Generator",
-                "desc": "Django system for product and sales management. The coolest challenge: parsing complex PDFs and turning messy data into clean reports.",
-                "tech": [
-                    "Django",
-                    "Python",
-                    "PostgreSQL",
-                    "PDF Processing"
-                ],
-                "type": "🧪 Solo Project",
-                "highlight": false
-            },
-            {
-                "name": "Agrox Hub",
-                "desc": "Web features for the agricultural sector. First freelance gig, first lessons about working with clients and real deadlines.",
-                "tech": [
-                    "Web Development"
-                ],
-                "type": "🌱 Freelance",
-                "highlight": false
-            }
-        ]
-    },
-    "skills": {
-        "tag": "Skills",
-        "title": "Tech",
-        "titleHighlight": "Stack",
-        "categories": [
-            {
-                "title": "Backend",
-                "skills": [
-                    {
-                        "name": "PHP / Laravel",
-                        "level": 90
-                    },
-                    {
-                        "name": "Python / Django",
-                        "level": 85
-                    },
-                    {
-                        "name": "Flask",
-                        "level": 70
-                    }
-                ]
-            },
-            {
-                "title": "Frontend",
-                "skills": [
-                    {
-                        "name": "HTML / CSS",
-                        "level": 90
-                    },
-                    {
-                        "name": "JavaScript",
-                        "level": 80
-                    },
-                    {
-                        "name": "Bootstrap",
-                        "level": 85
-                    }
-                ]
-            },
-            {
-                "title": "Databases",
-                "skills": [
-                    {
-                        "name": "PostgreSQL",
-                        "level": 85
-                    },
-                    {
-                        "name": "SQL",
-                        "level": 85
-                    }
-                ]
-            },
-            {
-                "title": "Other",
-                "skills": [
-                    {
-                        "name": "REST APIs",
-                        "level": 85
-                    },
-                    {
-                        "name": "Git",
-                        "level": 80
-                    },
-                    {
-                        "name": "Web Scraping",
-                        "level": 75
-                    },
-                    {
-                        "name": "Deploy",
-                        "level": 80
-                    },
-                    {
-                        "name": "C# / Java",
-                        "level": 60
-                    }
-                ]
-            }
-        ]
-    },
-    "experience": {
-        "tag": "Journey",
-        "title": "Professional",
-        "titleHighlight": "Experience",
-        "items": [
-            {
-                "company": "Eficiência Fiscal",
-                "role": "Full Stack Developer",
-                "period": "2023 — Present",
-                "tasks": [
-                    "Development and maintenance of a Laravel system",
-                    "Full stack work (frontend + backend + database)",
-                    "Integration with Python scripts (web scraping)",
-                    "Server deployment and configuration",
-                    "Bug fixes and continuous improvements",
-                    "Team training"
-                ]
-            },
-            {
-                "company": "Mix Generator",
-                "role": "Independent Project",
-                "period": "2024",
-                "tasks": [
-                    "Django web system for product and sales management",
-                    "Import and processing of complex PDFs with Python",
-                    "Data structuring for reports",
-                    "Production deployment"
-                ]
-            },
-            {
-                "company": "Agrox Hub",
-                "role": "Freelancer",
-                "period": "2024",
-                "tasks": [
-                    "Web feature development"
-                ]
-            }
-        ]
-    },
-    "education": {
-        "tag": "Education",
-        "title": "Education &",
-        "titleHighlight": "Certifications",
-        "academicTitle": "Academic Background",
-        "certificationsTitle": "Certifications",
-        "items": [
-            {
-                "title": "Systems Analysis and Development",
-                "institution": "IFRO",
-                "status": "In progress"
-            },
-            {
-                "title": "IT Technician",
-                "institution": "IFRO",
-                "status": "Completed"
-            },
-            {
-                "title": "Advanced English",
-                "institution": "SEDA College Online",
-                "status": "Completed"
-            }
-        ],
-        "certifications": [
-            {
-                "title": "Introduction to Cybersecurity",
-                "issuer": "Cisco",
-                "year": "2026"
-            },
-            {
-                "title": "Figma Training",
-                "issuer": "Alura",
-                "year": ""
-            },
-            {
-                "title": "HTML & CSS",
-                "issuer": "Alura",
-                "year": ""
-            },
-            {
-                "title": "Django",
-                "issuer": "Alura",
-                "year": ""
-            },
-            {
-                "title": "Python OOP",
-                "issuer": "Alura",
-                "year": ""
-            }
-        ]
-    },
-    "contact": {
-        "tag": "// contact",
-        "title": "Let's",
-        "titleHighlight": "have a chat",
-        "subtitle": "Got a cool project, an interesting position, or just want to talk tech — drop me a message. I reply fast.",
-        "terminalCommand": "./recruit.sh",
-        "terminalArgs": "--player filipe --class fullstack",
-        "terminalResult": "✓ Player added to the party. GG!",
-        "location": "Rondônia, Brazil · Open to remote"
-    },
-    "footer": {
-        "text": "Made with",
-        "textSuffix": "and a lot of grind"
+    "codeBlock": {
+      "fileBase": "about_me",
+      "selectAria": "Choose code language or format",
+      "variants": {
+        "json": "JSON",
+        "python": "Python",
+        "php": "PHP",
+        "yaml": "YAML",
+        "toml": "TOML",
+        "typescript": "TypeScript"
+      },
+      "keys": {
+        "name": "name",
+        "stack": "stack",
+        "rank": "rank",
+        "status": "status"
+      },
+      "profile": {
+        "name": "Filipe Maciel Lopes",
+        "stack": ["Laravel", "Python", "PostgreSQL"],
+        "rank": "Full Stack Dev",
+        "status": "Looking for new quests"
+      }
     }
+  },
+  "about": {
+    "tag": "// about_me",
+    "title": "Who is",
+    "titleHighlight": "Filipe",
+    "stackTitle": "Work stacks",
+    "bio": [
+      "Hi! I'm <strong>Filipe</strong>, focused on <code>PHP (Laravel)</code> and <code>Python</code>. Technical IT background from <strong>IFRO</strong> (Ji-Paraná), studying Systems Analysis and Development (ADS) — growing alongside a field that never stops changing.",
+      "I work in web development with interest in games, desktop, and mobile. On the job, I emphasize collaboration and technical leadership: aligning the team, code review, and supporting people who are leveling up.",
+      "Outside work: I support <strong>Botafogo</strong>, study languages (<strong>English</strong> and <strong>French</strong>), and enjoy pop culture — stories like Hunter × Hunter remind me that persistence and strategy matter as much as raw talent."
+    ],
+    "highlights": [
+      {
+        "label": "Backend",
+        "desc": "Laravel · Django · Flask"
+      },
+      {
+        "label": "Frontend",
+        "desc": "HTML · CSS · JS · Bootstrap"
+      },
+      {
+        "label": "Databases",
+        "desc": "PostgreSQL · SQL"
+      },
+      {
+        "label": "DevOps & More",
+        "desc": "Deploy · APIs · Git · Scraping"
+      }
+    ]
+  },
+  "projects": {
+    "tag": "// projects",
+    "title": "What I've",
+    "titleHighlight": "built",
+    "subtitle": "Each project taught me something different. Here are the ones I'm most proud of.",
+    "highlightBadge": "Featured",
+    "githubButton": "More on GitHub",
+    "items": [
+      {
+        "name": "Eficiência Fiscal",
+        "desc": "Complete Laravel system for fiscal management. Integration with Python scripts for automated web scraping, deployment, and production server maintenance.",
+        "tech": ["Laravel", "Python", "PostgreSQL", "Web Scraping"],
+        "type": "🏢 Company",
+        "highlight": true
+      },
+      {
+        "name": "Mix Generator",
+        "desc": "Django system for product and sales management. The coolest challenge: parsing complex PDFs and turning messy data into clean reports.",
+        "tech": ["Django", "Python", "PostgreSQL", "PDF Processing"],
+        "type": "🧪 Solo Project",
+        "highlight": false
+      },
+      {
+        "name": "Agrox Hub",
+        "desc": "Web features for the agricultural sector. First freelance gig, first lessons about working with clients and real deadlines.",
+        "tech": ["Web Development"],
+        "type": "🌱 Freelance",
+        "highlight": false
+      }
+    ]
+  },
+  "skills": {
+    "tag": "Stack",
+    "title": "Technologies",
+    "titleHighlight": "I use",
+    "subtitle": "Day-to-day tools and languages — visual reference only, no levels or percentages.",
+    "items": [
+      { "name": "PHP / Laravel", "icon": "laravel" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Django", "icon": "django" },
+      { "name": "Flask", "icon": "flask" },
+      { "name": "HTML / CSS", "icons": ["html5", "css"] },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "Bootstrap", "icon": "bootstrap" },
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "SQL", "icon": "mysql" },
+      { "name": "REST APIs", "icon": "swagger" },
+      { "name": "Git", "icon": "git" },
+      { "name": "Web Scraping", "icon": "selenium" },
+      { "name": "Deploy", "icon": "docker" },
+      { "name": "C# / Java", "icons": ["dotnet", "openjdk"] }
+    ]
+  },
+  "experience": {
+    "tag": "Journey",
+    "title": "Professional",
+    "titleHighlight": "Experience",
+    "items": [
+      {
+        "company": "Eficiência Fiscal",
+        "role": "Full Stack Developer",
+        "period": "2023 — Present",
+        "tasks": [
+          "Development and maintenance of a Laravel system",
+          "Full stack work (frontend + backend + database)",
+          "Integration with Python scripts (web scraping)",
+          "Server deployment and configuration",
+          "Bug fixes and continuous improvements",
+          "Team training"
+        ]
+      },
+      {
+        "company": "Mix Generator",
+        "role": "Independent Project",
+        "period": "2024",
+        "tasks": [
+          "Django web system for product and sales management",
+          "Import and processing of complex PDFs with Python",
+          "Data structuring for reports",
+          "Production deployment"
+        ]
+      },
+      {
+        "company": "Agrox Hub",
+        "role": "Freelancer",
+        "period": "2024",
+        "tasks": ["Web feature development"]
+      }
+    ]
+  },
+  "education": {
+    "tag": "Education",
+    "title": "Education &",
+    "titleHighlight": "Certifications",
+    "academicTitle": "Academic Background",
+    "certificationsTitle": "Certifications",
+    "items": [
+      {
+        "title": "Systems Analysis and Development",
+        "institution": "IFRO",
+        "status": "In progress"
+      },
+      {
+        "title": "IT Technician",
+        "institution": "IFRO",
+        "status": "Completed"
+      },
+      {
+        "title": "Advanced English",
+        "institution": "SEDA College Online",
+        "status": "Completed"
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Introduction to Cybersecurity",
+        "issuer": "Cisco",
+        "year": "2026"
+      },
+      {
+        "title": "Figma Training",
+        "issuer": "Alura",
+        "year": ""
+      },
+      {
+        "title": "HTML & CSS",
+        "issuer": "Alura",
+        "year": ""
+      },
+      {
+        "title": "Django",
+        "issuer": "Alura",
+        "year": ""
+      },
+      {
+        "title": "Python OOP",
+        "issuer": "Alura",
+        "year": ""
+      }
+    ]
+  },
+  "contact": {
+    "tag": "// contact",
+    "title": "Let's",
+    "titleHighlight": "have a chat",
+    "subtitle": "Got a cool project, an interesting position, or just want to talk tech — drop me a message. I reply fast.",
+    "terminalCommand": "./recruit.sh",
+    "terminalArgs": "--player filipe --class fullstack",
+    "terminalResult": "✓ Player added to the party. GG!",
+    "location": "Rondônia, Brazil · Open to remote"
+  },
+  "footer": {
+    "text": "Made with",
+    "textSuffix": "and a lot of grind"
+  }
 }

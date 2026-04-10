@@ -1,0 +1,11 @@
+node_modules
+dist
+dev-dist
+coverage
+build
+package-lock.json
+bun.lockb
+bun.lock
+Akio-claude
+.next
+.vercel

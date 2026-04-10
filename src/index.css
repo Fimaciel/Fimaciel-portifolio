@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -36,8 +36,8 @@
 
     --radius: 0.75rem;
 
-    --heading-font: 'JetBrains Mono', monospace;
-    --body-font: 'Space Grotesk', sans-serif;
+    --heading-font: "JetBrains Mono", monospace;
+    --body-font: "Space Grotesk", sans-serif;
 
     --glow-primary: 0 0 40px hsl(265 89% 60% / 0.1);
     --glow-strong: 0 0 80px hsl(265 89% 60% / 0.15);
@@ -140,8 +140,27 @@
     background-size: 60px 60px;
   }
 
+  /* Hero: brilho violeta suave no topo + cantos (tema claro/escuro via .dark) */
+  .hero-backdrop-glow {
+    background-image:
+      radial-gradient(ellipse 90% 75% at 50% -15%, hsl(var(--primary) / 0.13), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 95% 5%, hsl(var(--primary) / 0.07), transparent 65%),
+      radial-gradient(ellipse 55% 45% at 5% 8%, hsl(var(--primary) / 0.07), transparent 65%);
+  }
+
+  .dark .hero-backdrop-glow {
+    background-image:
+      radial-gradient(ellipse 90% 75% at 50% -15%, hsl(var(--primary) / 0.22), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 95% 5%, hsl(var(--primary) / 0.12), transparent 65%),
+      radial-gradient(ellipse 55% 45% at 5% 8%, hsl(var(--primary) / 0.12), transparent 65%);
+  }
+
+  .mask-hero-grid {
+    mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 92%);
+  }
+
   .section-padding {
-    @apply py-20 md:py-28 px-4 md:px-8;
+    @apply px-4 py-20 md:px-8 md:py-28;
   }
 }
 

@@ -12,17 +12,13 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background text-center px-4">
-      <h1 className="text-9xl font-heading font-black text-primary/20 absolute select-none">404</h1>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 text-center">
+      <h1 className="absolute select-none font-heading text-9xl font-black text-primary/20">404</h1>
       <div className="relative z-10">
-        <h2 className="text-3xl font-heading font-bold mb-4">{t("common.not_found_title")}</h2>
-        <p className="text-muted-foreground font-body mb-8 max-w-md mx-auto">
-          {t("common.not_found_desc")}
-        </p>
+        <h2 className="mb-4 font-heading text-3xl font-bold">{t("common.not_found_title")}</h2>
+        <p className="mx-auto mb-8 max-w-md font-body text-muted-foreground">{t("common.not_found_desc")}</p>
         <Button asChild variant="hero">
-          <Link to="/">
-            {t("common.back_home")}
-          </Link>
+          <Link to="/">{t("common.back_home")}</Link>
         </Button>
       </div>
     </div>

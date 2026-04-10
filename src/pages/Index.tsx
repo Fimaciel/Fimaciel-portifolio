@@ -1,25 +1,36 @@
-import Navbar from "@/components/layout/Navbar";
+import { lazy, Suspense } from "react";
+
+import StickerLineArtBackground from "@/components/backgrounds/StickerLineArtBackground";
 import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
-import SkillsSection from "@/components/sections/SkillsSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
-import EducationSection from "@/components/sections/EducationSection";
-import ContactSection from "@/components/sections/ContactSection";
+
+const AboutSection = lazy(() => import("@/components/sections/AboutSection"));
+const ProjectsSection = lazy(() => import("@/components/sections/ProjectsSection"));
+const SkillsSection = lazy(() => import("@/components/sections/SkillsSection"));
+const ExperienceSection = lazy(() => import("@/components/sections/ExperienceSection"));
+const EducationSection = lazy(() => import("@/components/sections/EducationSection"));
+const ContactSection = lazy(() => import("@/components/sections/ContactSection"));
+
+const SectionFallback = () => <div className="min-h-[60vh]" aria-hidden />;
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <EducationSection />
-      <ContactSection />
-      <Footer />
+    <div className="relative min-h-screen overflow-x-hidden">
+      <StickerLineArtBackground />
+      <div className="relative z-10">
+        <Navbar />
+        <HeroSection />
+        <Suspense fallback={<SectionFallback />}>
+          <AboutSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <EducationSection />
+          <ContactSection />
+        </Suspense>
+        <Footer />
+      </div>
     </div>
   );
 };
