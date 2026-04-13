@@ -1,23 +1,36 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Languages, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import type { NavLinkItem } from "@/types/portfolio";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
   const links = t("nav.links", { returnObjects: true }) as NavLinkItem[];
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
   const toggleLang = () => i18n.changeLanguage(i18n.language === "pt" ? "en" : "pt");
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <nav
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "border-b border-border bg-background/80 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
       <div className="container flex h-16 items-center justify-between">
         <a href="#home" className="font-heading text-lg font-bold text-primary">
           {"<FM />"}

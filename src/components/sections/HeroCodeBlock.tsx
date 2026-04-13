@@ -17,6 +17,15 @@ function isCodeVariant(v: string): v is CodeVariant {
   return (CODE_VARIANTS as readonly string[]).includes(v);
 }
 
+function computeAge(birthISO: string): string {
+  const birth = new Date(birthISO);
+  const now = new Date();
+  let age = now.getFullYear() - birth.getFullYear();
+  const m = now.getMonth() - birth.getMonth();
+  if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) age--;
+  return String(age);
+}
+
 interface CodeBlockI18n {
   fileBase: string;
   selectAria: string;
@@ -50,10 +59,9 @@ export default function HeroCodeBlock() {
 
   const filename = `${data.fileBase}${getCodeFileExtension(variant)}`;
 
-  const code = useMemo(
-    () => renderHeroCode(variant, data.profile, data.keys),
-    [variant, data.profile, data.keys],
-  );
+  const profile = useMemo(() => ({ ...data.profile, lvl: computeAge("2003-09-20") }), [data.profile]);
+
+  const code = useMemo(() => renderHeroCode(variant, profile, data.keys), [variant, profile, data.keys]);
 
   return (
     <div className="glow-box overflow-hidden rounded-xl border border-border bg-card shadow-lg">
@@ -87,17 +95,8 @@ export default function HeroCodeBlock() {
         </Select>
       </div>
 
-      <div className="border-b border-border/80 bg-muted/20 px-4 py-2">
-        <span
-          className="select-none font-heading text-[11px] tracking-widest text-muted-foreground/70 sm:text-xs"
-          aria-hidden
-        >
-          ---
-        </span>
-      </div>
-
       <div className="overflow-x-auto p-4 md:p-5">
-        <pre className="m-0 text-left font-heading text-[11px] leading-relaxed sm:text-xs">
+        <pre className="m-0 min-h-[16rem] text-left font-heading text-[11px] leading-relaxed sm:text-xs">
           <code className="text-foreground">{code}</code>
         </pre>
       </div>

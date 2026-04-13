@@ -9,6 +9,10 @@ export interface ProjectItem {
   tech: string[];
   type: string;
   highlight: boolean;
+  github?: string;
+  deploy?: string;
+  image?: string;
+  gradient?: string;
 }
 
 export interface ExperienceItem {

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import HeroBackdrop from "@/components/backgrounds/HeroBackdrop";
 import HeroCodeBlock from "@/components/sections/HeroCodeBlock";
-import { ArrowDown, Mail, Circle } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -43,24 +43,34 @@ const TypingText = () => {
   );
 };
 
+function computeYearsExp(startISO: string): number {
+  const start = new Date(startISO);
+  const now = new Date();
+  let years = now.getFullYear() - start.getFullYear();
+  const m = now.getMonth() - start.getMonth();
+  if (m < 0 || (m === 0 && now.getDate() < start.getDate())) years--;
+  return years;
+}
+
 const HeroSection = () => {
   const { t } = useTranslation();
+  const yearsExp = computeYearsExp("2023-09-04");
 
   return (
     <section id="home" className="section-padding relative flex min-h-screen items-center overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-background/55 dark:bg-background/45" aria-hidden />
+      <div className="absolute inset-0 z-0 bg-background/40 dark:bg-background/45" aria-hidden />
       <div className="pointer-events-none absolute inset-0 z-[1] min-h-full w-full">
         <HeroBackdrop />
       </div>
 
       <div className="container relative z-10">
-        <div className="grid items-center gap-12 lg:grid-cols-5">
+        <div className="grid items-stretch gap-12 lg:grid-cols-2">
           {/* Left - Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-3"
+            className="flex flex-col justify-center"
           >
             {/* Status badge */}
             <motion.div
@@ -82,7 +92,7 @@ const HeroSection = () => {
             </div>
 
             <p className="mb-8 max-w-lg font-body text-base leading-relaxed text-muted-foreground md:text-lg">
-              {t("hero.description")
+              {t("hero.description", { yearsExp })
                 .split("<code")
                 .map((part, i) => {
                   if (i === 0) return part;
@@ -98,19 +108,53 @@ const HeroSection = () => {
                 })}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" asChild>
-                <a href="#projects">
-                  <ArrowDown size={18} />
-                  {t("hero.buttons.projects")}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-wrap gap-4">
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#projects">
+                    <ArrowDown size={18} />
+                    {t("hero.buttons.projects")}
+                  </a>
+                </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <a href="#contact">
+                    <Mail size={18} />
+                    {t("hero.buttons.contact")}
+                  </a>
+                </Button>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://linkedin.com/in/filipe-maciel-lopes-221256267"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={14} />
+                  LinkedIn
                 </a>
-              </Button>
-              <Button variant="heroOutline" size="lg" asChild>
-                <a href="#contact">
-                  <Mail size={18} />
-                  {t("hero.buttons.contact")}
+                <a
+                  href="https://github.com/Fimaciel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  aria-label="GitHub"
+                >
+                  <Github size={14} />
+                  GitHub
                 </a>
-              </Button>
+                <a
+                  href="/curriculo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  aria-label={t("hero.buttons.resume")}
+                >
+                  <Download size={14} />
+                  {t("hero.buttons.resume")}
+                </a>
+              </div>
             </div>
           </motion.div>
 
@@ -119,9 +163,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
-            className="hidden lg:col-span-2 lg:block"
+            className="hidden lg:flex lg:items-stretch"
           >
-            <HeroCodeBlock />
+            <div className="w-full">
+              <HeroCodeBlock />
+            </div>
           </motion.div>
         </div>
       </div>

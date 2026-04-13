@@ -7,10 +7,15 @@ import type { TechStackItem } from "@/types/portfolio";
 const ICON_SLUG_ALIASES: Record<string, string> = {
   css3: "css",
   csharp: "dotnet",
-  java: "openjdk",
+};
+
+/** Ícones fora do Simple Icons (ex.: Java removido por marca registrada). */
+const ICON_URL_OVERRIDES: Record<string, string> = {
+  java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
 };
 
 const iconUrl = (slug: string) => {
+  if (ICON_URL_OVERRIDES[slug]) return ICON_URL_OVERRIDES[slug];
   const resolved = ICON_SLUG_ALIASES[slug] ?? slug;
   return `https://cdn.simpleicons.org/${encodeURIComponent(resolved)}?viewbox=auto`;
 };
@@ -61,7 +66,7 @@ const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="section-padding">
+    <section id="skills" className="section-padding bg-card/30">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,24 +82,24 @@ const SkillsSection = () => {
           </h2>
           <p className="mb-10 max-w-xl font-body text-muted-foreground">{t("skills.subtitle")}</p>
         </motion.div>
+      </div>
 
-        <div
-          className={
-            prefersReducedMotion
-              ? "relative rounded-xl border border-border bg-card/40 py-8"
-              : "relative overflow-hidden rounded-xl border border-border bg-card/40 py-8 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
-          }
-        >
-          <div className={prefersReducedMotion ? "" : "flex w-max animate-marquee"}>
-            {prefersReducedMotion ? (
-              track(0, "static")
-            ) : (
-              <>
-                {track(0, "marquee")}
-                {track(1, "marquee")}
-              </>
-            )}
-          </div>
+      <div
+        className={
+          prefersReducedMotion
+            ? "relative w-screen border-y border-border bg-card/40 py-8"
+            : "relative w-screen overflow-hidden border-y border-border bg-card/40 py-8 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+        }
+      >
+        <div className={prefersReducedMotion ? "" : "flex w-max animate-marquee"}>
+          {prefersReducedMotion ? (
+            track(0, "static")
+          ) : (
+            <>
+              {track(0, "marquee")}
+              {track(1, "marquee")}
+            </>
+          )}
         </div>
       </div>
     </section>

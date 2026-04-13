@@ -10,7 +10,7 @@ const ExperienceSection = () => {
   const experiences = t("experience.items", { returnObjects: true }) as ExperienceItem[];
 
   return (
-    <section id="experience" className="section-padding bg-card/30">
+    <section id="experience" className="section-padding">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

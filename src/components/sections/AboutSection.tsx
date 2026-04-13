@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Code2, Database, Globe, Server, Terminal } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import PhantomSpiderWatermark from "@/components/backgrounds/PhantomSpiderWatermark";
 import type { AboutHighlight } from "@/types/portfolio";
 
 const iconMap = [Server, Code2, Database, Globe];
@@ -15,9 +14,8 @@ const AboutSection = () => {
   const highlights = t("about.highlights", { returnObjects: true }) as AboutHighlight[];
 
   return (
-    <section id="about" className="section-padding relative">
-      <PhantomSpiderWatermark />
-      <div className="container relative z-10">
+    <section id="about" className="section-padding bg-card/30">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,8 +27,8 @@ const AboutSection = () => {
             {t("about.title")} <span className="text-gradient">{t("about.titleHighlight")}</span>
           </h2>
 
-          <div className="grid items-stretch gap-8 lg:grid-cols-2">
-            {/* Sobre mim — único card narrativo */}
+          <div className="grid items-stretch gap-12 lg:grid-cols-2">
+            {/* Bio card */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +68,7 @@ const AboutSection = () => {
               </div>
             </motion.div>
 
-            {/* Stacks de trabalho — um único card com faixas */}
+            {/* Tech stacks */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

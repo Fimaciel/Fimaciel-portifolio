@@ -22,10 +22,6 @@
         "href": "#experience"
       },
       {
-        "label": "Formação",
-        "href": "#education"
-      },
-      {
         "label": "Contato",
         "href": "#contact"
       }
@@ -33,13 +29,14 @@
   },
   "hero": {
     "status": "Aberto a novas oportunidades",
-    "title": "Eu sou",
+    "title": "Olá pessoa, eu sou",
     "subtitle": "Filipe Maciel",
     "roles": ["Desenvolvedor Full Stack", "Backend Developer", "Problem Solver"],
-    "description": "Transformo ideias em sistemas reais com <code>Laravel</code>, <code>Python</code> e <code>PostgreSQL</code>. Dois anos de XP em produção, código limpo e deploy sem drama.",
+    "description": "Transformo ideias em sistemas reais com criatividade e proatividade. Com mais de {{yearsExp}} anos de experiência, código limpo e deploy sem drama.",
     "buttons": {
       "projects": "Ver Projetos",
-      "contact": "Fale Comigo"
+      "contact": "Fale Comigo",
+      "resume": "Baixar CV"
     },
     "codeBlock": {
       "fileBase": "sobre_mim",
@@ -48,20 +45,23 @@
         "json": "JSON",
         "python": "Python",
         "php": "PHP",
-        "yaml": "YAML",
-        "toml": "TOML",
-        "typescript": "TypeScript"
+        "typescript": "TypeScript",
+        "javascript": "JavaScript",
+        "java": "Java",
+        "csharp": "C#"
       },
       "keys": {
         "name": "nome",
-        "stack": "stack",
-        "rank": "rank",
+        "lvl": "lvl",
+        "stack": "ferramentas",
+        "rank": "classe",
         "status": "status"
       },
       "profile": {
         "name": "Filipe Maciel Lopes",
-        "stack": ["Laravel", "Python", "PostgreSQL"],
-        "rank": "Full Stack Dev",
+        "lvl": "22",
+        "stack": ["Python", "Django", "Laravel", "PHP", "Postgres", "Java"],
+        "rank": "Dev Full-Stack",
         "status": "Buscando novas quests"
       }
     }
@@ -71,10 +71,11 @@
     "title": "Quem é",
     "titleHighlight": "Filipe",
     "stackTitle": "Stacks de trabalho",
+    "interestsTitle": "Fora do código",
     "bio": [
-      "Olá! Sou <strong>Filipe</strong>, desenvolvedor com foco em <code>PHP (Laravel)</code> e <code>Python</code>. Formação técnica em Informática pelo <strong>IFRO</strong> (Ji-Paraná), cursando Análise e Desenvolvimento de Sistemas (ADS) — buscando evoluir junto com uma área em constante transformação.",
-      "Atuo com desenvolvimento web e interesse em explorar jogos, desktop e mobile. No trabalho, priorizo colaboração e liderança técnica: alinhar o time, revisar código e apoiar quem está crescendo.",
-      "Fora do expediente: torcedor do <strong>Botafogo</strong>, estudo de idiomas (<strong>inglês</strong> e <strong>francês</strong>) e cultura pop — Hunter × Hunter é um daqueles lembretes de que persistência e estratégia valem tanto quanto talento bruto."
+      "Olá, sou Filipe! Conheci a programação aos 15 anos durante o curso técnico em Informática no <strong>IFRO</strong>, e desde então não parei mais. Hoje estou cursando minha graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo na área desde 2023.",
+      "Minhas principais stacks são <code>Laravel (PHP)</code> e <code>Python</code> com Django e Flask, mas gosto de me aventurar em tecnologias diferentes — <strong>Java</strong> e <strong>C#</strong> estão na minha lista. Trabalho como <strong>Full Stack</strong>, participando desde a modelagem até o deploy.",
+      "Tenho inglês avançado e, fora do trabalho, curto ler, jogar e acompanhar esportes."
     ],
     "highlights": [
       {
@@ -93,7 +94,13 @@
         "label": "DevOps & Mais",
         "desc": "Deploy · APIs · Git · Scraping"
       }
-    ]
+    ],
+    "interests": {
+      "football": { "title": "Futebol" },
+      "games": { "title": "Games" },
+      "anime": { "title": "Animes & Séries" },
+      "books": { "title": "Leituras" }
+    }
   },
   "projects": {
     "tag": "// projetos",
@@ -102,27 +109,89 @@
     "subtitle": "Cada projeto me ensinou algo diferente. Aqui estão os que mais me orgulho.",
     "highlightBadge": "Destaque",
     "githubButton": "Mais no GitHub",
+    "githubLabel": "GitHub",
+    "deployLabel": "Ver projeto",
     "items": [
       {
-        "name": "Eficiência Fiscal",
-        "desc": "Sistema completo em Laravel para gestão fiscal. Integração com scripts Python para web scraping automatizado, deploy e manutenção de servidores em produção.",
-        "tech": ["Laravel", "Python", "PostgreSQL", "Web Scraping"],
-        "type": "🏢 Empresa",
-        "highlight": true
+        "name": "tTempbr",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/tTempbr",
+        "gradient": "from-cyan-500/20 to-blue-500/20"
+      },
+      {
+        "name": "Aqualimpo",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/Aqualimpo",
+        "gradient": "from-blue-500/20 to-sky-500/20"
+      },
+      {
+        "name": "BarbeariaPro API",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/BarbeariaPro-API",
+        "gradient": "from-violet-500/20 to-purple-500/20"
+      },
+      {
+        "name": "Task App",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/task-app",
+        "gradient": "from-amber-500/20 to-orange-500/20"
+      },
+      {
+        "name": "SMA",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/SMA",
+        "gradient": "from-green-500/20 to-emerald-500/20"
+      },
+      {
+        "name": "Reccurt",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/reccurt",
+        "gradient": "from-rose-500/20 to-pink-500/20"
+      },
+      {
+        "name": "DocuMentor",
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/DocuMentor",
+        "gradient": "from-yellow-500/20 to-amber-500/20"
       },
       {
         "name": "Mix Generator",
-        "desc": "Sistema Django para gestão de produtos e vendas. O desafio mais legal: parsear PDFs complexos e transformar dados bagunçados em relatórios limpos.",
-        "tech": ["Django", "Python", "PostgreSQL", "PDF Processing"],
-        "type": "🧪 Projeto Solo",
-        "highlight": false
+        "desc": "",
+        "tech": [],
+        "type": "🔧 Projeto",
+        "highlight": false,
+        "github": "https://github.com/Fimaciel/mix-generator",
+        "gradient": "from-emerald-500/20 to-teal-500/20"
       },
       {
-        "name": "Agrox Hub",
-        "desc": "Funcionalidades web para o setor agrícola. Primeiro freela, primeiras lições sobre trabalhar com clientes e prazos reais.",
-        "tech": ["Web Development"],
-        "type": "🌱 Freelancer",
-        "highlight": false
+        "name": "SIMC",
+        "desc": "",
+        "tech": [],
+        "type": "👥 Colaboração",
+        "highlight": false,
+        "github": "https://github.com/nnathalia/SIMC",
+        "gradient": "from-indigo-500/20 to-blue-500/20"
       }
     ]
   },
@@ -130,14 +199,19 @@
     "tag": "Stack",
     "title": "Tecnologias",
     "titleHighlight": "que uso",
-    "subtitle": "Ferramentas e linguagens do dia a dia — referência visual, sem níveis ou percentuais.",
+    "subtitle": "",
     "items": [
-      { "name": "PHP / Laravel", "icon": "laravel" },
+      { "name": "PHP", "icon": "php" },
+      { "name": "Laravel", "icon": "laravel" },
       { "name": "Python", "icon": "python" },
       { "name": "Django", "icon": "django" },
       { "name": "Flask", "icon": "flask" },
-      { "name": "HTML / CSS", "icons": ["html5", "css"] },
+      { "name": "HTML", "icon": "html5" },
+      { "name": "CSS", "icon": "css" },
       { "name": "JavaScript", "icon": "javascript" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "React", "icon": "react" },
+      { "name": "Tailwind CSS", "icon": "tailwindcss" },
       { "name": "Bootstrap", "icon": "bootstrap" },
       { "name": "PostgreSQL", "icon": "postgresql" },
       { "name": "SQL", "icon": "mysql" },
@@ -145,7 +219,8 @@
       { "name": "Git", "icon": "git" },
       { "name": "Web Scraping", "icon": "selenium" },
       { "name": "Deploy", "icon": "docker" },
-      { "name": "C# / Java", "icons": ["dotnet", "openjdk"] }
+      { "name": "C#", "icon": "dotnet" },
+      { "name": "Java", "icon": "java" }
     ]
   },
   "experience": {
@@ -217,7 +292,7 @@
       {
         "title": "Formação Figma",
         "issuer": "Alura",
-        "year": ""
+        "year": "2023"
       },
       {
         "title": "HTML & CSS",
@@ -225,14 +300,14 @@
         "year": ""
       },
       {
-        "title": "Django",
+        "title": "Formação Django",
         "issuer": "Alura",
-        "year": ""
+        "year": "2022"
       },
       {
-        "title": "Python OOP",
+        "title": "Python com Orientação a Objetos",
         "issuer": "Alura",
-        "year": ""
+        "year": "2022"
       }
     ]
   },
@@ -241,10 +316,22 @@
     "title": "Bora",
     "titleHighlight": "trocar uma ideia",
     "subtitle": "Se você tem um projeto legal, uma vaga interessante ou só quer conversar sobre tech — manda mensagem. Respondo rápido.",
-    "terminalCommand": "./recruit.sh",
-    "terminalArgs": "--player filipe --class fullstack",
-    "terminalResult": "✓ Player adicionado ao party. GG!",
-    "location": "Rondônia, Brasil · Aberto a remoto"
+    "downloadCv": "Baixar Currículo",
+    "location": "Rondônia, Brasil · Aberto a remoto",
+    "cards": {
+      "linkedin": {
+        "title": "LinkedIn",
+        "desc": "Vamos nos conectar"
+      },
+      "github": {
+        "title": "GitHub",
+        "desc": "Veja meus repositórios"
+      },
+      "email": {
+        "title": "Email",
+        "desc": "filipemaciellopes01@gmail.com"
+      }
+    }
   },
   "footer": {
     "text": "Feito com",
