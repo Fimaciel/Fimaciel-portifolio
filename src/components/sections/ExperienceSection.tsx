@@ -88,9 +88,9 @@ function ExperienceContent({ exp }: { exp: ExperienceItem }) {
       <p className="mb-3 font-body text-sm text-primary">{exp.role}</p>
       <ul className="space-y-1.5">
         {exp.tasks.map((task, ti) => (
-          <li key={ti} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-            <span className="mt-1.5 text-[6px] text-primary">●</span>
-            {task}
+          <li key={ti} className="flex items-start gap-2.5 font-body text-sm text-muted-foreground">
+            <span className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+            <span className="flex-1">{task}</span>
           </li>
         ))}
       </ul>

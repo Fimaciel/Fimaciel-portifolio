@@ -114,84 +114,64 @@
     "items": [
       {
         "name": "tTempbr",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
+        "desc": "Aplicação desktop que monitora em tempo real a temperatura dos componentes do PC, com alertas visuais sempre que os limites são ultrapassados.",
+        "tech": ["Java", "Sensores de Hardware", "Desktop"],
+        "type": "🖥️ Desktop",
         "highlight": false,
         "github": "https://github.com/Fimaciel/tTempbr",
+        "image": "/projects-image/tTempbr.png",
         "gradient": "from-cyan-500/20 to-blue-500/20"
       },
       {
         "name": "Aqualimpo",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
+        "desc": "Mini-PDV construído como projeto de treinamento, cobrindo todo o fluxo de vendas, gestão de produtos e histórico de transações.",
+        "tech": ["PHP", "Laravel", "JavaScript", "Bootstrap"],
+        "type": "🛒 PDV",
         "highlight": false,
         "github": "https://github.com/Fimaciel/Aqualimpo",
+        "image": "/projects-image/Aqualimpo.png",
         "gradient": "from-blue-500/20 to-sky-500/20"
       },
       {
         "name": "BarbeariaPro API",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
+        "desc": "API REST para gestão completa de barbearias: agendamentos, catálogo de serviços, clientes e controle financeiro em um só lugar.",
+        "tech": ["C#", ".NET", "REST API", "SQL"],
+        "type": "⚙️ API REST",
         "highlight": false,
         "github": "https://github.com/Fimaciel/BarbeariaPro-API",
+        "image": "/projects-image/barbearia-pro.png",
         "gradient": "from-violet-500/20 to-purple-500/20"
       },
       {
-        "name": "Task App",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
-        "highlight": false,
-        "github": "https://github.com/Fimaciel/task-app",
-        "gradient": "from-amber-500/20 to-orange-500/20"
-      },
-      {
         "name": "SMA",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
+        "desc": "Sistema que integra Arduino e Python para automatizar a chamada de presença, conectando hardware físico à lógica de software.",
+        "tech": ["Python", "Arduino", "IoT", "Automação"],
+        "type": "🤖 IoT",
         "highlight": false,
         "github": "https://github.com/Fimaciel/SMA",
+        "image": "/projects-image/SMA.png",
         "gradient": "from-green-500/20 to-emerald-500/20"
       },
       {
-        "name": "Reccurt",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
-        "highlight": false,
-        "github": "https://github.com/Fimaciel/reccurt",
-        "gradient": "from-rose-500/20 to-pink-500/20"
-      },
-      {
         "name": "DocuMentor",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
+        "desc": "Aplicação web interativa que consome a API pública de Harry Potter para apresentar personagens, feitiços e casas em um portfólio temático.",
+        "tech": ["JavaScript", "REST API", "HTML", "CSS"],
+        "type": "🌐 Web App",
         "highlight": false,
         "github": "https://github.com/Fimaciel/DocuMentor",
+        "deploy": "https://fimaciel.github.io/DocuMentor/",
+        "image": "/projects-image/Documentor.png",
         "gradient": "from-yellow-500/20 to-amber-500/20"
       },
       {
         "name": "Mix Generator",
-        "desc": "",
-        "tech": [],
-        "type": "🔧 Projeto",
-        "highlight": false,
+        "desc": "Plataforma web para gestão de vendas com importação e processamento de PDFs, geração de relatórios e estruturação de dados para tomada de decisão.",
+        "tech": ["Python", "Django", "PostgreSQL", "PDF"],
+        "type": "📊 Gestão",
+        "highlight": true,
         "github": "https://github.com/Fimaciel/mix-generator",
+        "image": "/projects-image/mix.png",
         "gradient": "from-emerald-500/20 to-teal-500/20"
-      },
-      {
-        "name": "SIMC",
-        "desc": "",
-        "tech": [],
-        "type": "👥 Colaboração",
-        "highlight": false,
-        "github": "https://github.com/nnathalia/SIMC",
-        "gradient": "from-indigo-500/20 to-blue-500/20"
       }
     ]
   },
@@ -250,6 +230,17 @@
           "Importação e processamento de PDFs complexos com Python",
           "Estruturação de dados para relatórios",
           "Deploy em produção"
+        ]
+      },
+      {
+        "company": "SIMC",
+        "role": "Projeto de Pesquisa",
+        "period": "2024",
+        "tasks": [
+          "Organização da equipe e divisão de tasks",
+          "Implementação de autenticação e ajustes em código",
+          "Modelagem e integração com banco de dados",
+          "Deploy via Cloudflare Tunnel, expondo o servidor local em Arduino para produção"
         ]
       },
       {
