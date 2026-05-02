@@ -53,3 +53,5 @@ pnpm-lock.yaml
 Akio-claude
 .claude
 CLAUDE.md
+.vercel
+.env*.local
