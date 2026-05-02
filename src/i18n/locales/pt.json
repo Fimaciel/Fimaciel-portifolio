@@ -29,7 +29,7 @@
   },
   "hero": {
     "status": "Aberto a novas oportunidades",
-    "title": "Olá pessoa, eu sou",
+    "title": "Olá, eu sou",
     "subtitle": "Filipe Maciel",
     "roles": ["Desenvolvedor Full Stack", "Backend Developer", "Problem Solver"],
     "description": "Transformo ideias em sistemas reais com criatividade e proatividade. Com mais de {{yearsExp}} anos de experiência, código limpo e deploy sem drama.",
