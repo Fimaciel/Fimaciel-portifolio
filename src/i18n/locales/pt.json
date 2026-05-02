@@ -210,15 +210,16 @@
     "items": [
       {
         "company": "Eficiência Fiscal",
-        "role": "Desenvolvedor Full Stack",
-        "period": "2023 — Atual",
+        "role": "Desenvolvedor Full Stack Pleno",
+        "period": "Set/2023 — Atual",
         "tasks": [
-          "Desenvolvimento e manutenção de sistema em Laravel",
-          "Atuação full stack (frontend + backend + banco)",
-          "Integração com scripts Python (web scraping)",
-          "Deploy e configuração de servidores",
-          "Correção de bugs e melhorias contínuas",
-          "Treinamento de equipe"
+          "Promovido a Pleno em Fev/2026",
+          "Desenvolvimento ativo do produto em Laravel (PHP), do banco ao deploy",
+          "Arquitetura de APIs RESTful e processos assíncronos",
+          "Refatoração completa do sistema de mensageria",
+          "Otimização de performance em PostgreSQL",
+          "Code review, debugging e qualidade em produção",
+          "Mentoria de novos desenvolvedores"
         ]
       },
       {

@@ -210,15 +210,16 @@
     "items": [
       {
         "company": "Eficiência Fiscal",
-        "role": "Full Stack Developer",
-        "period": "2023 — Present",
+        "role": "Mid-Level Full Stack Developer",
+        "period": "Sep/2023 — Present",
         "tasks": [
-          "Development and maintenance of a Laravel system",
-          "Full stack work (frontend + backend + database)",
-          "Integration with Python scripts (web scraping)",
-          "Server deployment and configuration",
-          "Bug fixes and continuous improvements",
-          "Team training"
+          "Promoted to Mid-Level in Feb/2026",
+          "Active product development in Laravel (PHP), from database to deploy",
+          "Architecting RESTful APIs and asynchronous processes",
+          "Full refactor of the messaging system",
+          "PostgreSQL performance tuning",
+          "Code review, debugging and production quality",
+          "Mentoring new developers"
         ]
       },
       {

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filipe Maciel Lopes — Desenvolvedor Full Stack Pleno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Currículo de Filipe Maciel Lopes — Desenvolvedor Full Stack Pleno (PHP/Laravel, Python/Django, PostgreSQL)."
+    />
+    <meta name="author" content="Filipe Maciel Lopes" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background: #f4f4f4;
+        color: #1a1a1a;
+        line-height: 1.55;
+        font-size: 15px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        width: 100%;
+        max-width: 880px;
+        margin: 24px auto;
+        background: #fff;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+      }
+
+      header {
+        padding: 36px 48px 22px;
+        border-bottom: 2px solid #111;
+      }
+
+      header h1 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 4px;
+        letter-spacing: -0.01em;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        color: #444;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+
+      .contact {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .contact a {
+        color: #555;
+        text-decoration: none;
+      }
+
+      .contact a:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      .contact .sep {
+        margin: 0 8px;
+        color: #aaa;
+      }
+
+      main {
+        padding: 24px 48px 44px;
+      }
+
+      section {
+        margin-top: 22px;
+      }
+
+      section h2 {
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 4px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #111;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: 18px;
+        margin-top: 4px;
+      }
+
+      li {
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+
+      .skills li {
+        margin-bottom: 4px;
+      }
+
+      .skills strong {
+        color: #111;
+      }
+
+      article {
+        margin-bottom: 14px;
+      }
+
+      article:last-child {
+        margin-bottom: 0;
+      }
+
+      article header.exp,
+      article header.proj {
+        padding: 0;
+        border: 0;
+        margin-bottom: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 4px 12px;
+      }
+
+      article h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111;
+      }
+
+      .meta {
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
+      }
+
+      .role {
+        font-size: 13.5px;
+        color: #333;
+        font-style: italic;
+        margin-bottom: 4px;
+      }
+
+      .stack-line {
+        font-size: 12.5px;
+        color: #444;
+        margin-top: 4px;
+      }
+
+      .stack-line strong {
+        color: #111;
+      }
+
+      .proj-link {
+        font-size: 12.5px;
+        color: #555;
+        margin-top: 2px;
+      }
+
+      .proj-link a {
+        color: #555;
+        text-decoration: none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      @page {
+        size: A4;
+        margin: 12mm 14mm;
+      }
+
+      @media print {
+        html,
+        body {
+          height: auto;
+          background: #fff;
+        }
+        body {
+          font-size: 10pt;
+          line-height: 1.4;
+          color: #000;
+        }
+        .page {
+          max-width: 100%;
+          margin: 0;
+          box-shadow: none;
+        }
+        header {
+          padding: 0 0 10px;
+          border-bottom-width: 1.2pt;
+        }
+        header h1 {
+          font-size: 20pt;
+        }
+        .subtitle {
+          font-size: 11pt;
+          margin-bottom: 6px;
+        }
+        .contact,
+        .contact a {
+          font-size: 8.8pt;
+          color: #222;
+        }
+        main {
+          padding: 10px 0 0;
+        }
+        section {
+          margin-top: 12px;
+          page-break-inside: avoid;
+        }
+        section h2 {
+          font-size: 10.5pt;
+          margin-bottom: 6px;
+        }
+        article {
+          page-break-inside: avoid;
+          margin-bottom: 8px;
+        }
+        article h3 {
+          font-size: 10.5pt;
+        }
+        .meta,
+        .role,
+        .stack-line,
+        .proj-link {
+          font-size: 9pt;
+        }
+        p,
+        li {
+          font-size: 9.5pt;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header>
+        <h1>Filipe Maciel Lopes</h1>
+        <p class="subtitle">Desenvolvedor Full Stack Pleno · PHP/Laravel · Python · PostgreSQL</p>
+        <div class="contact">
+          Ji-Paraná, Rondônia, Brasil <span class="sep">·</span> Aberto a remoto
+          <span class="sep">·</span>
+          <a href="mailto:filipemaciellopes01@gmail.com">filipemaciellopes01@gmail.com</a>
+          <span class="sep">·</span> (69) 99330-3111
+          <br />
+          <a href="https://linkedin.com/in/filipe-maciel-lopes-221256267" target="_blank" rel="noopener">
+            linkedin.com/in/filipe-maciel-lopes-221256267
+          </a>
+          <span class="sep">·</span>
+          <a href="https://github.com/Fimaciel" target="_blank" rel="noopener">github.com/Fimaciel</a>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Resumo Profissional</h2>
+          <p>
+            Desenvolvedor Full Stack Pleno com mais de 2 anos atuando ponta a ponta em produção. Arquitetura e
+            desenvolvimento de APIs RESTful, processos assíncronos e otimização de PostgreSQL em tabelas de
+            grande volume. Stack principal em PHP/Laravel e Python, com frontend em JavaScript/jQuery.
+            Reconhecido por liderança técnica, code review e mentoria de novos desenvolvedores.
+          </p>
+        </section>
+
+        <section>
+          <h2>Competências Técnicas</h2>
+          <ul class="skills">
+            <li><strong>Linguagens:</strong> PHP, Python, JavaScript, TypeScript, SQL, Java, C#</li>
+            <li>
+              <strong>Backend &amp; APIs:</strong> Laravel, Django, Flask, .NET, REST APIs, processos
+              assíncronos
+            </li>
+            <li><strong>Frontend:</strong> React, jQuery, HTML5, CSS3, Tailwind CSS, Bootstrap</li>
+            <li><strong>Banco de Dados:</strong> PostgreSQL, MySQL</li>
+            <li>
+              <strong>DevOps &amp; Infra:</strong> Docker, Linux, deploy em produção, Cloudflare Tunnel, Git
+            </li>
+            <li><strong>Outros:</strong> Web Scraping, processamento de PDFs, Figma</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Experiência Profissional</h2>
+
+          <article>
+            <header class="exp">
+              <h3>Eficiência Fiscal — Desenvolvedor Full Stack Pleno</h3>
+              <span class="meta">Set/2023 – Atual · Ji-Paraná, RO</span>
+            </header>
+            <p class="role">Promovido a Pleno em Fev/2026. Antes: Desenvolvedor Web (Set/2023 – Jan/2026).</p>
+            <ul>
+              <li>
+                Desenvolvimento ativo do produto Eficiencia.app em Laravel (PHP), atuando do banco de dados ao
+                deploy em produção.
+              </li>
+              <li>
+                Arquitetura e desenvolvimento de APIs RESTful e processos assíncronos para operações de alta
+                complexidade.
+              </li>
+              <li>
+                Refatoração completa do sistema de mensageria, melhorando confiabilidade, observabilidade e
+                manutenção.
+              </li>
+              <li>
+                Otimização de performance em PostgreSQL: queries complexas, subqueries, indexação e tuning em
+                tabelas de grande volume.
+              </li>
+              <li>Code review, debugging e manutenção de qualidade em ambiente de produção.</li>
+              <li>Evolução contínua do frontend e gestão de deploys em produção.</li>
+              <li>
+                Treinamento e mentoria de novos desenvolvedores; difusão de boas práticas de código e
+                colaboração.
+              </li>
+              <li>Contribuições em Python e Java em projetos diversos da empresa.</li>
+            </ul>
+            <p class="stack-line">
+              <strong>Stack:</strong> PHP/Laravel, PostgreSQL, JavaScript/jQuery, Python, REST APIs, Java.
+            </p>
+          </article>
+
+          <article>
+            <header class="exp">
+              <h3>Arquitetura do Saber — Desenvolvedor Front-End</h3>
+              <span class="meta">2023 · Ji-Paraná, RO</span>
+            </header>
+            <ul>
+              <li>Desenvolvimento de interfaces web em projeto de curta duração.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <h2>Projetos em Destaque</h2>
+
+          <article>
+            <header class="proj">
+              <h3>Mix Generator — Plataforma de Gestão de Vendas</h3>
+              <span class="meta">2024</span>
+            </header>
+            <p>
+              Plataforma web própria, do design ao deploy, para gestão de vendas e geração de relatórios.
+              Pipeline em Python que importa e processa PDFs complexos, extraindo e estruturando dados para
+              tomada de decisão.
+            </p>
+            <p class="stack-line">
+              <strong>Stack:</strong> Python, Django, PostgreSQL, processamento de PDFs.
+            </p>
+            <p class="proj-link">
+              <a href="https://github.com/Fimaciel/mix-generator" target="_blank" rel="noopener">
+                github.com/Fimaciel/mix-generator
+              </a>
+            </p>
+          </article>
+
+          <article>
+            <header class="proj">
+              <h3>SIMC — Projeto de Pesquisa Acadêmica</h3>
+              <span class="meta">2024</span>
+            </header>
+            <p>
+              Atuação na organização da equipe e divisão de tasks, implementação de autenticação, modelagem e
+              integração de banco. Deploy via Cloudflare Tunnel expondo servidor local em Arduino para
+              produção.
+            </p>
+            <p class="stack-line">
+              <strong>Stack:</strong> Python, Arduino, Cloudflare Tunnel, autenticação, modelagem de dados.
+            </p>
+          </article>
+
+          <article>
+            <header class="proj">
+              <h3>BarbeariaPro API</h3>
+              <span class="meta">Projeto pessoal</span>
+            </header>
+            <p>
+              API REST para gestão completa de barbearias: agendamentos, catálogo de serviços, clientes e
+              controle financeiro.
+            </p>
+            <p class="stack-line"><strong>Stack:</strong> C#, .NET, REST API, SQL.</p>
+            <p class="proj-link">
+              <a href="https://github.com/Fimaciel/BarbeariaPro-API" target="_blank" rel="noopener">
+                github.com/Fimaciel/BarbeariaPro-API
+              </a>
+            </p>
+          </article>
+
+          <article>
+            <header class="proj">
+              <h3>Outros projetos no GitHub</h3>
+            </header>
+            <p>
+              tTempbr (Java desktop, monitor de temperatura), Aqualimpo (Laravel PDV), SMA (Python + Arduino,
+              IoT), DocuMentor (web app em JS).
+            </p>
+            <p class="proj-link">
+              <a href="https://github.com/Fimaciel" target="_blank" rel="noopener">github.com/Fimaciel</a>
+            </p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Formação Acadêmica</h2>
+
+          <article>
+            <header class="exp">
+              <h3>Análise e Desenvolvimento de Sistemas — IFRO</h3>
+              <span class="meta">2023 – Atual · Em andamento</span>
+            </header>
+          </article>
+
+          <article>
+            <header class="exp">
+              <h3>Técnico em Informática (Programação) — IFRO</h3>
+              <span class="meta">2019 – 2021 · Concluído</span>
+            </header>
+          </article>
+        </section>
+
+        <section>
+          <h2>Certificações</h2>
+          <ul>
+            <li>DevOps: construindo e gerindo containers com Docker — Alura</li>
+            <li>Introdução à Cibersegurança — Cisco Networking Academy · 2026</li>
+            <li>Formação Django — Alura · 2022</li>
+            <li>Python com Orientação a Objetos — Alura · 2022</li>
+            <li>HTML &amp; CSS para projetos web — Alura</li>
+            <li>Formação Figma — Alura · 2023</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Idiomas</h2>
+          <ul>
+            <li>Português — Nativo</li>
+            <li>Inglês — Pleno profissional <em>(Full Professional)</em></li>
+            <li>Francês — Iniciante (em estudo)</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

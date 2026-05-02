@@ -35,7 +35,7 @@ const contactCards = [
 ];
 
 const ContactSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <section id="contact" className="section-padding bg-card/30">
@@ -92,7 +92,11 @@ const ContactSection = () => {
             className="mb-8"
           >
             <Button variant="hero" size="lg" asChild>
-              <a href="/curriculo.html" target="_blank" rel="noopener noreferrer">
+              <a
+                href={i18n.language.startsWith("en") ? "/curriculo-en.pdf" : "/curriculo-pt.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download size={18} />
                 {t("contact.downloadCv")}
               </a>

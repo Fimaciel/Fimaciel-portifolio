@@ -53,7 +53,7 @@ function computeYearsExp(startISO: string): number {
 }
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const yearsExp = computeYearsExp("2023-09-04");
 
   return (
@@ -145,7 +145,7 @@ const HeroSection = () => {
                   GitHub
                 </a>
                 <a
-                  href="/curriculo.html"
+                  href={i18n.language.startsWith("en") ? "/curriculo-en.pdf" : "/curriculo-pt.pdf"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
