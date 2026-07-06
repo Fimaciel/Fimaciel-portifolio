@@ -23,8 +23,8 @@ const iconUrl = (slug: string) => {
 type Tier = "core" | "familiar";
 
 const TIER_STYLES: Record<Tier, { img: string; box: string; size: number }> = {
-  core: { img: "h-9 w-9 opacity-90", box: "h-10", size: 36 },
-  familiar: { img: "h-7 w-7 opacity-55", box: "h-8", size: 28 },
+  core: { img: "h-10 w-10 opacity-90", box: "h-11", size: 40 },
+  familiar: { img: "h-8 w-8 opacity-60", box: "h-9", size: 32 },
 };
 
 const SkillsSection = () => {
@@ -40,7 +40,7 @@ const SkillsSection = () => {
         className={
           layout === "static"
             ? "mx-auto flex max-w-5xl flex-wrap justify-center gap-x-10 gap-y-8 px-4 md:gap-x-14"
-            : "flex shrink-0 items-center gap-10 px-5 md:gap-14 md:px-8"
+            : "flex shrink-0 items-center gap-8 px-4 md:gap-12 md:px-6"
         }
         aria-hidden={layout === "marquee" && dup === 1}
       >
@@ -49,7 +49,7 @@ const SkillsSection = () => {
           return (
             <li
               key={`${dup}-${item.name}-${slugs.join("-")}`}
-              className="flex flex-col items-center gap-2.5 text-center"
+              className="flex min-w-[6.75rem] flex-col items-center gap-2.5 text-center"
             >
               <div className={`flex items-center justify-center gap-2 ${style.box}`}>
                 {slugs.map((slug) => (
@@ -65,7 +65,7 @@ const SkillsSection = () => {
                   />
                 ))}
               </div>
-              <span className="max-w-[7.5rem] font-body text-xs leading-tight text-muted-foreground">
+              <span className="max-w-[7.5rem] font-heading text-[11px] leading-tight text-muted-foreground">
                 {item.name}
               </span>
             </li>
@@ -82,12 +82,10 @@ const SkillsSection = () => {
     return (
       <div key={group.label} className="space-y-3">
         <div className="container">
-          <p className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-muted-foreground">
+          <p className="flex items-center gap-3 font-heading text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <span
               className={
-                tier === "core"
-                  ? "inline-block h-1.5 w-6 rounded-full bg-primary"
-                  : "inline-block h-1.5 w-6 rounded-full bg-border"
+                tier === "core" ? "inline-block h-px w-8 bg-primary" : "inline-block h-px w-8 bg-border"
               }
               aria-hidden
             />
@@ -97,16 +95,19 @@ const SkillsSection = () => {
         <div
           className={
             prefersReducedMotion
-              ? "relative w-screen border-y border-border bg-card/55 py-6"
-              : "relative w-screen overflow-hidden border-y border-border bg-card/55 py-6 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
+              ? "relative left-1/2 w-screen -translate-x-1/2 border-y border-border bg-card/55 py-6"
+              : "relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y border-border bg-card/55 py-6 [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)]"
           }
         >
           <div
-            className={prefersReducedMotion ? "" : "flex w-max animate-marquee"}
+            className={prefersReducedMotion ? "" : "flex w-max animate-marquee will-change-transform"}
             style={
-              prefersReducedMotion || !reverse
+              prefersReducedMotion
                 ? undefined
-                : { animationDirection: "reverse", animationDuration: "60s" }
+                : {
+                    animationDirection: reverse ? "reverse" : "normal",
+                    animationDuration: tier === "core" ? "42s" : "58s",
+                  }
             }
           >
             {prefersReducedMotion ? (
@@ -115,6 +116,8 @@ const SkillsSection = () => {
               <>
                 {renderTrack(group.items, 0, "marquee", tier)}
                 {renderTrack(group.items, 1, "marquee", tier)}
+                {renderTrack(group.items, 2, "marquee", tier)}
+                {renderTrack(group.items, 3, "marquee", tier)}
               </>
             )}
           </div>
