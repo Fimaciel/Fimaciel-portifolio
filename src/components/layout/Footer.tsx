@@ -1,6 +1,8 @@
 import { Github, Linkedin, Gamepad2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import { portfolioConfig } from "@/config/portfolio";
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -12,7 +14,7 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/Fimaciel"
+            href={portfolioConfig.links.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
@@ -20,7 +22,7 @@ const Footer = () => {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/filipe-maciel-lopes-221256267"
+            href={portfolioConfig.links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
@@ -29,7 +31,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="font-heading text-xs text-primary/50">
-          {"<FM /> · "}
+          {`${portfolioConfig.brand} · `}
           {new Date().getFullYear()}
         </p>
       </div>

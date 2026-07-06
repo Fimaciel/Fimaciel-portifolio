@@ -33,9 +33,9 @@ export function getCodeFileExtension(variant: CodeVariant): string {
   return EXT[variant];
 }
 
-const kw = "text-sky-500 dark:text-sky-400";
+const kw = "text-stone-600 dark:text-stone-300";
 const prop = "text-primary";
-const str = "text-emerald-600 dark:text-emerald-400";
+const str = "text-neutral-600 dark:text-neutral-300";
 const punct = "text-muted-foreground";
 
 function S({ children }: { children: ReactNode }) {
@@ -224,7 +224,7 @@ function TsBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys }) {
   return (
     <>
       <span className={kw}>export</span> <span className={kw}>const</span>{" "}
-      <span className="text-amber-500 dark:text-amber-400">profile</span>
+      <span className="text-zinc-600 dark:text-zinc-300">profile</span>
       <span className={punct}> = {"{"}</span>
       {"\n"}
       {"  "}
@@ -278,7 +278,7 @@ function TsBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys }) {
 function JsBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys }) {
   return (
     <>
-      <span className={kw}>const</span> <span className="text-amber-500 dark:text-amber-400">profile</span>
+      <span className={kw}>const</span> <span className="text-zinc-600 dark:text-zinc-300">profile</span>
       <span className={punct}> = {"{"}</span>
       {"\n"}
       {"  "}
@@ -331,7 +331,7 @@ function JavaBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys })
   return (
     <>
       <span className={kw}>public class</span>{" "}
-      <span className="text-amber-500 dark:text-amber-400">Profile</span>
+      <span className="text-zinc-600 dark:text-zinc-300">Profile</span>
       <span className={punct}> {"{"}</span>
       {"\n\n"}
       {"  "}
@@ -377,7 +377,7 @@ function JavaBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys })
       {"\n\n"}
       {"  "}
       <span className={kw}>public</span> <span className={kw}>String</span>{" "}
-      <span className="text-amber-500 dark:text-amber-400">get{capitalize(k.name)}</span>
+      <span className="text-zinc-600 dark:text-zinc-300">get{capitalize(k.name)}</span>
       <span className={punct}>() {"{"}</span>
       {"\n"}
       {"    "}
@@ -397,7 +397,7 @@ function CsharpBlock({ profile, k }: { profile: HeroProfile; k: HeroProfileKeys 
   return (
     <>
       <span className={kw}>public class</span>{" "}
-      <span className="text-amber-500 dark:text-amber-400">Profile</span>
+      <span className="text-zinc-600 dark:text-zinc-300">Profile</span>
       <span className={punct}> {"{"}</span>
       {"\n"}
       {"  "}

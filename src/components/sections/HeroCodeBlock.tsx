@@ -64,7 +64,7 @@ export default function HeroCodeBlock() {
   const code = useMemo(() => renderHeroCode(variant, profile, data.keys), [variant, profile, data.keys]);
 
   return (
-    <div className="glow-box overflow-hidden rounded-xl border border-border bg-card shadow-lg">
+    <div className="glow-box overflow-hidden rounded-lg border border-border bg-card shadow-lg">
       <div className="flex flex-row flex-wrap items-center gap-x-2 gap-y-2 border-b border-border bg-muted/40 px-3 py-3 sm:px-4">
         <div className="flex min-w-0 flex-1 items-center gap-2 sm:min-w-[8rem]">
           <FileCode2 className="h-4 w-4 shrink-0 text-primary" aria-hidden />

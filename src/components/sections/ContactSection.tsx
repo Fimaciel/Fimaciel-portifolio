@@ -3,34 +3,35 @@ import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
+import { getResumeHref, portfolioConfig } from "@/config/portfolio";
 
 const contactCards = [
   {
     icon: Linkedin,
-    color: "text-sky-400",
-    bg: "bg-sky-400/10",
-    border: "hover:border-sky-400/40",
+    color: "text-stone-300",
+    bg: "bg-stone-400/10",
+    border: "hover:border-stone-300/40",
     titleKey: "contact.cards.linkedin.title",
     descKey: "contact.cards.linkedin.desc",
-    href: "https://linkedin.com/in/filipe-maciel-lopes-221256267",
+    href: portfolioConfig.links.linkedin,
   },
   {
     icon: Github,
-    color: "text-purple-400",
-    bg: "bg-purple-400/10",
-    border: "hover:border-purple-400/40",
+    color: "text-zinc-300",
+    bg: "bg-zinc-400/10",
+    border: "hover:border-zinc-300/40",
     titleKey: "contact.cards.github.title",
     descKey: "contact.cards.github.desc",
-    href: "https://github.com/Fimaciel",
+    href: portfolioConfig.links.github,
   },
   {
     icon: Mail,
-    color: "text-emerald-400",
-    bg: "bg-emerald-400/10",
-    border: "hover:border-emerald-400/40",
+    color: "text-neutral-300",
+    bg: "bg-neutral-400/10",
+    border: "hover:border-neutral-300/40",
     titleKey: "contact.cards.email.title",
     descKey: "contact.cards.email.desc",
-    href: "mailto:filipe.maciel.lopes13@gmail.com",
+    href: portfolioConfig.links.email,
   },
 ];
 
@@ -38,7 +39,7 @@ const ContactSection = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <section id="contact" className="section-padding bg-card/30">
+    <section id="contact" className="section-padding scroll-mt-24 bg-card/30">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,9 +48,7 @@ const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="mb-2 font-heading text-sm uppercase tracking-widest text-primary">
-            {t("contact.tag")}
-          </p>
+          <p className="section-kicker mb-2">{t("contact.tag")}</p>
           <h2 className="mb-4 font-heading text-3xl font-bold md:text-4xl">
             {t("contact.title")} <span className="text-gradient">{t("contact.titleHighlight")}</span>?
           </h2>
@@ -69,9 +68,9 @@ const ContactSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`group flex flex-col items-center rounded-xl border border-border bg-card p-6 transition-all hover:shadow-md ${card.border}`}
+                  className={`surface-panel group flex flex-col items-center rounded-lg p-6 transition-all hover:shadow-md ${card.border}`}
                 >
-                  <div className={`mb-3 rounded-xl p-3 ${card.bg}`}>
+                  <div className={`mb-3 rounded-lg p-3 ${card.bg}`}>
                     <Icon size={24} className={card.color} aria-hidden />
                   </div>
                   <p className="font-heading text-sm font-semibold text-foreground transition-colors group-hover:text-primary">
@@ -92,11 +91,7 @@ const ContactSection = () => {
             className="mb-8"
           >
             <Button variant="hero" size="lg" asChild>
-              <a
-                href={i18n.language.startsWith("en") ? "/curriculo-en.pdf" : "/curriculo-pt.pdf"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={getResumeHref(i18n.language)} target="_blank" rel="noopener noreferrer">
                 <Download size={18} />
                 {t("contact.downloadCv")}
               </a>

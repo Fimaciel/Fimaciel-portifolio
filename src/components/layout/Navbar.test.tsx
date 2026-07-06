@@ -1,18 +1,21 @@
 import { describe, expect, it } from "vitest";
 
 import { renderWithProviders, screen } from "@/__tests__/test-utils";
+import { portfolioConfig } from "@/config/portfolio";
+import pt from "@/i18n/locales/pt.json";
 
 import Navbar from "./Navbar";
 
 describe("Navbar", () => {
   it("renders the brand monogram", () => {
     renderWithProviders(<Navbar />);
-    expect(screen.getByText("<FM />")).toBeInTheDocument();
+    expect(screen.getByText(portfolioConfig.brand)).toBeInTheDocument();
   });
 
   it("renders all PT navigation links", () => {
     renderWithProviders(<Navbar />, { initialLanguage: "pt" });
-    const expected = ["Início", "Sobre", "Projetos", "Stack", "Experiência", "Formação", "Contato"];
+    const expected = pt.nav.links.map((link) => link.label);
+
     for (const label of expected) {
       const matches = screen.getAllByText(label);
       expect(matches.length).toBeGreaterThan(0);

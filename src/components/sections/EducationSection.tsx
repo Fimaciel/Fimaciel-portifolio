@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Award, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import type { CertificationItem, EducationItem } from "@/types/portfolio";
+import type { CertificationItem, EducationItem } from "@/features/portfolio";
 
 const EducationSection = () => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const EducationSection = () => {
   const certifications = t("education.certifications", { returnObjects: true }) as CertificationItem[];
 
   return (
-    <section id="education" className="section-padding">
+    <section id="education" className="section-padding scroll-mt-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,9 +18,7 @@ const EducationSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-2 font-heading text-sm uppercase tracking-widest text-primary">
-            {t("education.tag")}
-          </p>
+          <p className="section-kicker mb-2">{t("education.tag")}</p>
           <h2 className="mb-12 font-heading text-3xl font-bold md:text-4xl">
             {t("education.title")} <span className="text-gradient">{t("education.titleHighlight")}</span>
           </h2>
@@ -41,7 +39,7 @@ const EducationSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.4 }}
-                  className="hover:border-glow rounded-lg border border-border bg-card p-5 transition-colors"
+                  className="surface-panel hover:border-glow rounded-lg p-5 transition-colors"
                 >
                   <p className="font-heading text-sm font-semibold text-foreground">{e.title}</p>
                   <p className="mt-1 font-body text-xs text-muted-foreground">{e.institution}</p>
@@ -67,7 +65,7 @@ const EducationSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.4 }}
-                  className="hover:border-glow rounded-lg border border-border bg-card p-5 transition-colors"
+                  className="surface-panel hover:border-glow rounded-lg p-5 transition-colors"
                 >
                   <p className="font-heading text-sm font-semibold text-foreground">{c.title}</p>
                   <p className="mt-1 font-body text-xs text-muted-foreground">

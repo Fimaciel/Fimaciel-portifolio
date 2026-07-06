@@ -5,7 +5,8 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
-import type { ProjectItem } from "@/types/portfolio";
+import { portfolioConfig } from "@/config/portfolio";
+import type { ProjectItem } from "@/features/portfolio";
 
 function circularDistance(i: number, center: number, total: number) {
   let d = (((i - center) % total) + total) % total;
@@ -18,15 +19,15 @@ function ProjectCard({ p, active }: { p: ProjectItem; active: boolean }) {
 
   return (
     <div
-      className={`relative flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-500 ${
+      className={`relative flex h-full w-full flex-col overflow-hidden rounded-lg border bg-card transition-all duration-500 ${
         active
-          ? "border-primary/60 shadow-2xl shadow-primary/20 ring-1 ring-primary/40"
+          ? "border-primary/60 shadow-2xl shadow-primary/15 ring-1 ring-primary/35"
           : "border-border/60 shadow-md"
       }`}
     >
       <div
         className={`relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gradient-to-br ${
-          p.gradient ?? "from-primary/20 to-purple-500/20"
+          p.gradient ?? "from-stone-500/20 to-zinc-500/20"
         }`}
       >
         {p.image ? (
@@ -44,7 +45,7 @@ function ProjectCard({ p, active }: { p: ProjectItem; active: boolean }) {
         )}
 
         {p.highlight && (
-          <span className="absolute right-3 top-3 rounded-full bg-primary/90 px-3 py-1 font-heading text-[10px] uppercase tracking-widest text-primary-foreground shadow-md backdrop-blur-sm">
+          <span className="absolute right-3 top-3 rounded-md bg-accent px-3 py-1 font-heading text-[10px] uppercase tracking-widest text-accent-foreground shadow-md">
             {t("projects.highlightBadge")}
           </span>
         )}
@@ -61,7 +62,7 @@ function ProjectCard({ p, active }: { p: ProjectItem; active: boolean }) {
           {p.tech.map((tag) => (
             <span
               key={tag}
-              className="rounded-md bg-secondary px-2 py-0.5 font-heading text-[11px] text-secondary-foreground"
+              className="rounded border border-border bg-secondary/70 px-2 py-0.5 font-heading text-[11px] text-secondary-foreground"
             >
               {tag}
             </span>
@@ -75,7 +76,7 @@ function ProjectCard({ p, active }: { p: ProjectItem; active: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className={`inline-flex items-center justify-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-2 font-heading text-xs text-foreground transition-colors hover:border-primary/50 hover:text-primary ${
+              className={`inline-flex items-center justify-center gap-1.5 rounded-md border border-border bg-secondary px-3 py-2 font-heading text-xs text-foreground transition-colors hover:border-primary/50 hover:text-primary ${
                 !p.deploy ? "flex-1" : ""
               }`}
             >
@@ -89,7 +90,7 @@ function ProjectCard({ p, active }: { p: ProjectItem; active: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-primary px-3 py-2 font-heading text-xs text-primary-foreground transition-opacity hover:opacity-90"
+              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-primary px-3 py-2 font-heading text-xs text-primary-foreground transition-opacity hover:opacity-90"
             >
               <ExternalLink size={14} />
               Live
@@ -136,7 +137,7 @@ const ProjectsSection = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section id="projects" className="section-padding overflow-hidden">
+    <section id="projects" className="section-padding scroll-mt-24 overflow-hidden">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -146,9 +147,7 @@ const ProjectsSection = () => {
           className="mb-12 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between"
         >
           <div>
-            <p className="mb-2 font-heading text-sm uppercase tracking-widest text-primary">
-              {t("projects.tag")}
-            </p>
+            <p className="section-kicker mb-2">{t("projects.tag")}</p>
             <h2 className="mb-4 font-heading text-3xl font-bold md:text-4xl">
               {t("projects.title")} <span className="text-gradient">{t("projects.titleHighlight")}</span>
             </h2>
@@ -159,7 +158,7 @@ const ProjectsSection = () => {
             <button
               onClick={scrollPrev}
               aria-label="Anterior"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-foreground transition-colors hover:border-primary/50 hover:text-primary"
             >
               <ChevronLeft size={20} />
             </button>
@@ -170,7 +169,7 @@ const ProjectsSection = () => {
             <button
               onClick={scrollNext}
               aria-label="Próximo"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-foreground transition-colors hover:border-primary/50 hover:text-primary"
             >
               <ChevronRight size={20} />
             </button>
@@ -199,7 +198,7 @@ const ProjectsSection = () => {
                     onClick={() => !isActive && emblaApi?.scrollTo(i)}
                     disabled={isActive}
                     aria-label={isActive ? p.name : `Ir para ${p.name}`}
-                    className="block w-full rounded-2xl text-left transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-grab"
+                    className="block w-full rounded-lg text-left transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-grab"
                     style={{
                       transform: `scale(${scale})`,
                       opacity,
@@ -244,7 +243,7 @@ const ProjectsSection = () => {
           className="mt-10 text-center"
         >
           <Button variant="heroOutline" size="lg" asChild>
-            <a href="https://github.com/Fimaciel" target="_blank" rel="noopener noreferrer">
+            <a href={portfolioConfig.links.github} target="_blank" rel="noopener noreferrer">
               <Github size={18} />
               {t("projects.githubButton")}
               <ExternalLink size={14} />

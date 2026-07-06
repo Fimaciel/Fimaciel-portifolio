@@ -55,3 +55,6 @@ Akio-claude
 CLAUDE.md
 .vercel
 .env*.local
+
+# CV personalizado local (não versionar)
+.local-cv/

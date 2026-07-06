@@ -29,10 +29,16 @@
   },
   "hero": {
     "status": "Open to new opportunities",
+    "kicker": "Ji-Paraná/RO · backend, data and product",
     "title": "Hey there, I'm",
     "subtitle": "Filipe Maciel",
-    "roles": ["Full Stack Developer", "Backend Developer", "Problem Solver"],
-    "description": "I turn ideas into real systems with creativity and a proactive mindset. With over {{yearsExp}} years of experience, clean code, and hassle-free deploys.",
+    "roles": ["Laravel Full Stack", "Python Backend", "PostgreSQL day to day"],
+    "description": "Developer working with Python, PHP, JavaScript and PostgreSQL.",
+    "facts": [
+      { "label": "base", "value": "Laravel · Python" },
+      { "label": "data", "value": "PostgreSQL · PDFs" },
+      { "label": "product", "value": "messaging · deploy" }
+    ],
     "buttons": {
       "projects": "View Projects",
       "contact": "Get in Touch",
@@ -67,32 +73,32 @@
     }
   },
   "about": {
-    "tag": "// about_me",
-    "title": "Who is",
-    "titleHighlight": "Filipe",
-    "stackTitle": "Work stacks",
+    "tag": "about",
+    "title": "Technical",
+    "titleHighlight": "profile",
+    "stackTitle": "Working base",
     "interestsTitle": "Beyond the code",
     "bio": [
-      "Hey, I'm Filipe! I discovered programming at 15 during my IT technical course at <strong>IFRO</strong>, and I haven't stopped since. I'm currently finishing my degree in <strong>Systems Analysis and Development</strong> and have been working in the field since 2023.",
-      "My main stacks are <code>Laravel (PHP)</code> and <code>Python</code> with Django and Flask, but I enjoy exploring different technologies — <strong>Java</strong> and <strong>C#</strong> are on my list. I work as a <strong>Full Stack</strong> developer, involved from data modelling all the way to deployment.",
-      "I have advanced English and, outside of work, I enjoy reading, gaming, and following sports."
+      "Developer from Ji-Paraná/RO, Brazil, trained in IT at <strong>IFRO</strong> and currently studying <strong>Systems Analysis and Development</strong>.",
+      "My main experience is web product work with <code>Laravel/PHP</code>, PostgreSQL and JavaScript. I also use <code>Python</code> for APIs, automation, Django/Flask and file processing.",
+      "I like working close to the business flow: understanding rules, modelling data, tuning queries, integrating services and following deployments."
     ],
     "highlights": [
       {
         "label": "Backend",
-        "desc": "Laravel · Django · Flask"
+        "desc": "Laravel, Django, Flask, REST APIs"
       },
       {
         "label": "Frontend",
-        "desc": "HTML · CSS · JS · Bootstrap"
+        "desc": "JavaScript, jQuery, React, Bootstrap"
       },
       {
         "label": "Databases",
-        "desc": "PostgreSQL · SQL"
+        "desc": "PostgreSQL, SQL, modelling, queries"
       },
       {
-        "label": "DevOps & More",
-        "desc": "Deploy · APIs · Git · Scraping"
+        "label": "Operations",
+        "desc": "deploy, debugging, Git, PDF processing"
       }
     ],
     "interests": {
@@ -103,10 +109,10 @@
     }
   },
   "projects": {
-    "tag": "// projects",
+    "tag": "lab notes",
     "title": "What I've",
     "titleHighlight": "built",
-    "subtitle": "Each project taught me something different. Here are the ones I'm most proud of.",
+    "subtitle": "Small projects with concrete problems: sales, PDFs, hardware, APIs and automation.",
     "highlightBadge": "Featured",
     "githubButton": "More on GitHub",
     "githubLabel": "GitHub",
@@ -114,64 +120,64 @@
     "items": [
       {
         "name": "tTempbr",
-        "desc": "Desktop app that monitors your computer's component temperatures in real time, raising visual alerts whenever thresholds are exceeded.",
+        "desc": "Java desktop app for tracking PC component temperatures and showing a visual alert when a threshold is exceeded.",
         "tech": ["Java", "Hardware Sensors", "Desktop"],
-        "type": "🖥️ Desktop",
+        "type": "Desktop App",
         "highlight": false,
         "github": "https://github.com/Fimaciel/tTempbr",
         "image": "/projects-image/tTempbr.png",
-        "gradient": "from-cyan-500/20 to-blue-500/20"
+        "gradient": "from-stone-500/20 to-zinc-500/20"
       },
       {
         "name": "Aqualimpo",
-        "desc": "Mini POS built as hands-on training, covering the sales flow, product management and transaction history.",
+        "desc": "Laravel mini POS built to practice a complete sales flow: product registration, transaction records and history.",
         "tech": ["PHP", "Laravel", "JavaScript", "Bootstrap"],
-        "type": "🛒 POS",
+        "type": "Mini POS",
         "highlight": false,
         "github": "https://github.com/Fimaciel/Aqualimpo",
         "image": "/projects-image/Aqualimpo.png",
-        "gradient": "from-blue-500/20 to-sky-500/20"
+        "gradient": "from-zinc-500/20 to-neutral-500/20"
       },
       {
         "name": "BarbeariaPro API",
-        "desc": "REST API for full barbershop management: bookings, service catalog, customers and financial control.",
+        "desc": ".NET REST API for barbershop operations: appointments, services, customers and financial control split by domain.",
         "tech": ["C#", ".NET", "REST API", "SQL"],
-        "type": "⚙️ REST API",
+        "type": "REST API",
         "highlight": false,
         "github": "https://github.com/Fimaciel/BarbeariaPro-API",
         "image": "/projects-image/barbearia-pro.png",
-        "gradient": "from-violet-500/20 to-purple-500/20"
+        "gradient": "from-slate-500/20 to-stone-500/20"
       },
       {
         "name": "SMA",
-        "desc": "System that bridges Arduino and Python to automate attendance calls, connecting physical hardware with software logic.",
+        "desc": "Attendance system with Arduino and Python, connecting physical reads to an app that registers presence automatically.",
         "tech": ["Python", "Arduino", "IoT", "Automation"],
-        "type": "🤖 IoT",
+        "type": "IoT",
         "highlight": false,
         "github": "https://github.com/Fimaciel/SMA",
         "image": "/projects-image/SMA.png",
-        "gradient": "from-green-500/20 to-emerald-500/20"
+        "gradient": "from-zinc-500/20 to-slate-500/20"
       },
       {
         "name": "DocuMentor",
-        "desc": "Interactive web app that consumes the public Harry Potter API to showcase characters, spells and houses in a themed portfolio.",
+        "desc": "Simple web app consuming a public API, with themed lists and pages for characters, spells and houses.",
         "tech": ["JavaScript", "REST API", "HTML", "CSS"],
-        "type": "🌐 Web App",
+        "type": "Web App",
         "highlight": false,
         "github": "https://github.com/Fimaciel/DocuMentor",
         "deploy": "https://fimaciel.github.io/DocuMentor/",
         "image": "/projects-image/Documentor.png",
-        "gradient": "from-yellow-500/20 to-amber-500/20"
+        "gradient": "from-neutral-500/20 to-stone-500/20"
       },
       {
         "name": "Mix Generator",
-        "desc": "Web platform for sales management with PDF ingestion and processing, report generation and data structuring for decision making.",
+        "desc": "Django system for sales management, PDF import and data structuring into reports that are easier to inspect.",
         "tech": ["Python", "Django", "PostgreSQL", "PDF"],
-        "type": "📊 Management",
+        "type": "Management",
         "highlight": true,
         "github": "https://github.com/Fimaciel/mix-generator",
         "image": "/projects-image/mix.png",
-        "gradient": "from-emerald-500/20 to-teal-500/20"
+        "gradient": "from-stone-500/20 to-slate-500/20"
       }
     ]
   },
@@ -180,27 +186,37 @@
     "title": "Technologies",
     "titleHighlight": "I use",
     "subtitle": "",
-    "items": [
-      { "name": "PHP", "icon": "php" },
-      { "name": "Laravel", "icon": "laravel" },
-      { "name": "Python", "icon": "python" },
-      { "name": "Django", "icon": "django" },
-      { "name": "Flask", "icon": "flask" },
-      { "name": "HTML", "icon": "html5" },
-      { "name": "CSS", "icon": "css" },
-      { "name": "JavaScript", "icon": "javascript" },
-      { "name": "TypeScript", "icon": "typescript" },
-      { "name": "React", "icon": "react" },
-      { "name": "Tailwind CSS", "icon": "tailwindcss" },
-      { "name": "Bootstrap", "icon": "bootstrap" },
-      { "name": "PostgreSQL", "icon": "postgresql" },
-      { "name": "SQL", "icon": "mysql" },
-      { "name": "REST APIs", "icon": "swagger" },
-      { "name": "Git", "icon": "git" },
-      { "name": "Web Scraping", "icon": "selenium" },
-      { "name": "Deploy", "icon": "docker" },
-      { "name": "C#", "icon": "dotnet" },
-      { "name": "Java", "icon": "java" }
+    "groups": [
+      {
+        "label": "Core",
+        "items": [
+          { "name": "PHP", "icon": "php" },
+          { "name": "Laravel", "icon": "laravel" },
+          { "name": "Python", "icon": "python" },
+          { "name": "Django", "icon": "django" },
+          { "name": "Flask", "icon": "flask" },
+          { "name": "PostgreSQL", "icon": "postgresql" },
+          { "name": "SQL", "icon": "mysql" },
+          { "name": "JavaScript", "icon": "javascript" },
+          { "name": "REST APIs", "icon": "swagger" },
+          { "name": "Git", "icon": "git" }
+        ]
+      },
+      {
+        "label": "Familiarity",
+        "items": [
+          { "name": "HTML", "icon": "html5" },
+          { "name": "CSS", "icon": "css" },
+          { "name": "TypeScript", "icon": "typescript" },
+          { "name": "React", "icon": "react" },
+          { "name": "Tailwind CSS", "icon": "tailwindcss" },
+          { "name": "Bootstrap", "icon": "bootstrap" },
+          { "name": "Web Scraping", "icon": "selenium" },
+          { "name": "Deploy", "icon": "docker" },
+          { "name": "C#", "icon": "dotnet" },
+          { "name": "Java", "icon": "java" }
+        ]
+      }
     ]
   },
   "experience": {
@@ -211,15 +227,15 @@
       {
         "company": "Eficiência Fiscal",
         "role": "Mid-Level Full Stack Developer",
-        "period": "Sep/2023 — Present",
+        "period": "Sep/2023 — Jun/2026",
         "tasks": [
           "Promoted to Mid-Level in Feb/2026",
-          "Active product development in Laravel (PHP), from database to deploy",
-          "Architecting RESTful APIs and asynchronous processes",
-          "Full refactor of the messaging system",
-          "PostgreSQL performance tuning",
-          "Code review, debugging and production quality",
-          "Mentoring new developers"
+          "Maintenance and evolution of a web product with Laravel (PHP), PostgreSQL and JavaScript/jQuery",
+          "Creation of REST APIs and asynchronous routines for internal system flows",
+          "Refactor of the messaging module to reduce fragility and improve maintenance",
+          "PostgreSQL query performance adjustments on larger-volume tables",
+          "Production debugging, code review and deployment follow-up",
+          "Technical support for new developers joining the product"
         ]
       },
       {

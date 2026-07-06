@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+
 import { render, type RenderOptions } from "@testing-library/react";
 import { ThemeProvider } from "next-themes";
 import type { ReactElement, ReactNode } from "react";

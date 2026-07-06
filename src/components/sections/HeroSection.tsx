@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import HeroBackdrop from "@/components/backgrounds/HeroBackdrop";
-import HeroCodeBlock from "@/components/sections/HeroCodeBlock";
-import { ArrowDown, Download, Github, Linkedin, Mail, Circle } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Radio } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import HeroBackdrop from "@/components/backgrounds/HeroBackdrop";
+import HeroCodeBlock from "@/components/sections/HeroCodeBlock";
+import { Button } from "@/components/ui/button";
+import { getResumeHref, portfolioConfig } from "@/config/portfolio";
 
 const TypingText = () => {
   const { t } = useTranslation();
@@ -43,56 +45,47 @@ const TypingText = () => {
   );
 };
 
-function computeYearsExp(startISO: string): number {
-  const start = new Date(startISO);
-  const now = new Date();
-  let years = now.getFullYear() - start.getFullYear();
-  const m = now.getMonth() - start.getMonth();
-  if (m < 0 || (m === 0 && now.getDate() < start.getDate())) years--;
-  return years;
-}
-
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
-  const yearsExp = computeYearsExp("2023-09-04");
+  const facts = t("hero.facts", { returnObjects: true }) as { label: string; value: string }[];
 
   return (
-    <section id="home" className="section-padding relative flex min-h-screen items-center overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-background/40 dark:bg-background/45" aria-hidden />
+    <section
+      id="home"
+      className="relative flex min-h-[88svh] items-center overflow-hidden px-4 pb-14 pt-24 md:px-8 md:pb-16 md:pt-28"
+    >
+      <div className="absolute inset-0 z-0 bg-background/20" aria-hidden />
       <div className="pointer-events-none absolute inset-0 z-[1] min-h-full w-full">
         <HeroBackdrop />
       </div>
 
       <div className="container relative z-10">
-        <div className="grid items-stretch gap-12 lg:grid-cols-2">
-          {/* Left - Text */}
+        <div className="mb-8 flex flex-wrap items-center gap-3 border-y border-border/70 py-3 font-heading text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="text-primary">{t("hero.kicker")}</span>
+          <span className="hidden h-px flex-1 bg-border sm:block" aria-hidden />
+          <span className="flex items-center gap-2">
+            <Radio size={13} className="text-accent" />
+            {t("hero.status")}
+          </span>
+        </div>
+
+        <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(27rem,0.86fr)]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="flex flex-col justify-center"
           >
-            {/* Status badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5"
-            >
-              <Circle size={8} className="animate-pulse fill-purple-400 text-purple-400" />
-              <span className="font-heading text-xs tracking-wide text-primary">🎮 {t("hero.status")}</span>
-            </motion.div>
-
-            <h1 className="mb-4 font-heading text-4xl font-bold leading-[1.1] md:text-6xl lg:text-7xl">
+            <h1 className="mb-4 max-w-4xl font-heading text-4xl font-bold leading-[1.02] md:text-6xl lg:text-7xl">
               {t("hero.title")} <span className="text-gradient">{t("hero.subtitle")}</span>
             </h1>
 
-            <div className="mb-6 h-8 font-heading text-lg md:text-xl">
+            <div className="mb-6 h-8 font-heading text-lg text-primary md:text-xl">
               <TypingText />
             </div>
 
-            <p className="mb-8 max-w-lg font-body text-base leading-relaxed text-muted-foreground md:text-lg">
-              {t("hero.description", { yearsExp })
+            <p className="mb-8 max-w-2xl border-l-2 border-primary/50 pl-5 font-body text-base leading-relaxed text-muted-foreground md:text-lg">
+              {t("hero.description")
                 .split("<code")
                 .map((part, i) => {
                   if (i === 0) return part;
@@ -107,6 +100,17 @@ const HeroSection = () => {
                   );
                 })}
             </p>
+
+            <div className="mb-8 grid gap-3 sm:grid-cols-3">
+              {facts.map((fact) => (
+                <div key={fact.label} className="surface-panel rounded-lg p-4">
+                  <p className="font-heading text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                    {fact.label}
+                  </p>
+                  <p className="mt-2 font-heading text-sm text-foreground">{fact.value}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="flex flex-col gap-4">
               <div className="flex flex-wrap gap-4">
@@ -123,32 +127,32 @@ const HeroSection = () => {
                   </a>
                 </Button>
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://linkedin.com/in/filipe-maciel-lopes-221256267"
+                  href={portfolioConfig.links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/70 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={14} />
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/Fimaciel"
+                  href={portfolioConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/70 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
                   aria-label="GitHub"
                 >
                   <Github size={14} />
                   GitHub
                 </a>
                 <a
-                  href={i18n.language.startsWith("en") ? "/curriculo-en.pdf" : "/curriculo-pt.pdf"}
+                  href={getResumeHref(i18n.language)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/50 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/70 px-3 py-2 font-heading text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
                   aria-label={t("hero.buttons.resume")}
                 >
                   <Download size={14} />
@@ -158,14 +162,13 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Right — bloco de código (stack) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
             className="hidden lg:flex lg:items-stretch"
           >
-            <div className="w-full">
+            <div className="w-full border-l border-border/70 pl-6">
               <HeroCodeBlock />
             </div>
           </motion.div>

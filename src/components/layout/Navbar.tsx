@@ -1,10 +1,10 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { Languages, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import type { NavLinkItem } from "@/types/portfolio";
+import { portfolioConfig } from "@/config/portfolio";
+import type { NavLinkItem } from "@/features/portfolio";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -24,16 +24,14 @@ const Navbar = () => {
   const toggleLang = () => i18n.changeLanguage(i18n.language === "pt" ? "en" : "pt");
 
   return (
-    <nav
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
-      <div className="container flex h-16 items-center justify-between">
+    <nav className="fixed left-0 right-0 top-3 z-50 px-4 transition-all duration-300">
+      <div
+        className={`mx-auto flex h-14 w-full max-w-screen-xl items-center justify-between rounded-lg border px-4 backdrop-blur-md transition-all ${
+          scrolled ? "border-border bg-background/85 shadow-sm" : "border-border/60 bg-background/55"
+        }`}
+      >
         <a href="#home" className="font-heading text-lg font-bold text-primary">
-          {"<FM />"}
+          {portfolioConfig.brand}
         </a>
 
         {/* Desktop */}
@@ -93,30 +91,23 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-b border-border bg-background md:hidden"
-          >
-            <ul className="flex flex-col gap-2 p-4">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {open && (
+        <div className="mx-auto mt-2 w-full max-w-screen-xl overflow-hidden rounded-lg border border-border bg-background/95 shadow-lg backdrop-blur-md md:hidden">
+          <ul className="flex flex-col gap-2 p-4">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-md px-2 py-2 font-body text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
