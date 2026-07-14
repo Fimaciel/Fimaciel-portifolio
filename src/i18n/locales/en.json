@@ -34,11 +34,6 @@
     "subtitle": "Filipe Maciel",
     "roles": ["Laravel Full Stack", "Python Backend", "PostgreSQL day to day"],
     "description": "Developer working with Python, PHP, JavaScript and PostgreSQL.",
-    "facts": [
-      { "label": "base", "value": "Laravel · Python" },
-      { "label": "data", "value": "PostgreSQL · PDFs" },
-      { "label": "product", "value": "messaging · deploy" }
-    ],
     "buttons": {
       "projects": "View Projects",
       "contact": "Get in Touch",

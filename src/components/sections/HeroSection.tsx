@@ -47,7 +47,6 @@ const TypingText = () => {
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
-  const facts = t("hero.facts", { returnObjects: true }) as { label: string; value: string }[];
 
   return (
     <section
@@ -100,17 +99,6 @@ const HeroSection = () => {
                   );
                 })}
             </p>
-
-            <div className="mb-8 grid gap-3 sm:grid-cols-3">
-              {facts.map((fact) => (
-                <div key={fact.label} className="surface-panel rounded-lg p-4">
-                  <p className="font-heading text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                    {fact.label}
-                  </p>
-                  <p className="mt-2 font-heading text-sm text-foreground">{fact.value}</p>
-                </div>
-              ))}
-            </div>
 
             <div className="flex flex-col gap-4">
               <div className="flex flex-wrap gap-4">
