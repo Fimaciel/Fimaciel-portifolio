@@ -22,6 +22,10 @@
         "href": "#experience"
       },
       {
+        "label": "Acadêmico",
+        "href": "#education"
+      },
+      {
         "label": "Contato",
         "href": "#contact"
       }
@@ -220,6 +224,19 @@
     "titleHighlight": "Profissional",
     "items": [
       {
+        "company": "NBS Telecom",
+        "role": "Analista de Dados e Desenvolvedor",
+        "period": "Set/2026 — Atual",
+        "tasks": [
+          "Automação de indicadores com n8n, integrando sistemas internos e bases de dados",
+          "Desenvolvimento de uma API de apresentações para um departamento consolidar e apresentar seus indicadores",
+          "Criação de uma API para busca e acompanhamento de licitações",
+          "Desenvolvimento de soluções internas com Synfone",
+          "Web scraping para coleta e estruturação de dados",
+          "Construção de dashboards e análises no Power BI"
+        ]
+      },
+      {
         "company": "Eficiência Fiscal",
         "role": "Desenvolvedor Full Stack Pleno",
         "period": "Set/2023 — Jun/2026",
@@ -265,9 +282,10 @@
   },
   "education": {
     "tag": "Formação",
-    "title": "Educação &",
-    "titleHighlight": "Certificações",
+    "title": "Formação &",
+    "titleHighlight": "Pesquisa",
     "academicTitle": "Formação Acadêmica",
+    "projectsTitle": "Pesquisa e Extensão",
     "certificationsTitle": "Certificações",
     "items": [
       {
@@ -284,6 +302,20 @@
         "title": "Inglês Avançado",
         "institution": "SEDA College Online",
         "status": "Concluído"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Solos Digital",
+        "type": "Projeto de Pesquisa e Extensão",
+        "role": "Desenvolvedor Backend",
+        "period": "Jun/2026 — Atual",
+        "description": "Atuação no backend do projeto, acompanhando o ciclo da API até a entrega em produção.",
+        "tasks": [
+          "Desenvolvimento da API do projeto",
+          "Estruturação e acompanhamento do deploy",
+          "Implementação e manutenção do pipeline de CI/CD"
+        ]
       }
     ],
     "certifications": [

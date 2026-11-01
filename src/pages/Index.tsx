@@ -8,6 +8,7 @@ const AboutSection = lazy(() => import("@/components/sections/AboutSection"));
 const ProjectsSection = lazy(() => import("@/components/sections/ProjectsSection"));
 const SkillsSection = lazy(() => import("@/components/sections/SkillsSection"));
 const ExperienceSection = lazy(() => import("@/components/sections/ExperienceSection"));
+const EducationSection = lazy(() => import("@/components/sections/EducationSection"));
 const ContactSection = lazy(() => import("@/components/sections/ContactSection"));
 
 const SectionFallback = () => <div className="min-h-[60vh]" aria-hidden />;
@@ -23,6 +24,7 @@ const Index = () => {
           <ProjectsSection />
           <SkillsSection />
           <ExperienceSection />
+          <EducationSection />
           <ContactSection />
         </Suspense>
         <Footer />

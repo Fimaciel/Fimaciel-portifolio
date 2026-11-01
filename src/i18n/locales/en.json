@@ -22,6 +22,10 @@
         "href": "#experience"
       },
       {
+        "label": "Academic",
+        "href": "#education"
+      },
+      {
         "label": "Contact",
         "href": "#contact"
       }
@@ -220,6 +224,19 @@
     "titleHighlight": "Experience",
     "items": [
       {
+        "company": "NBS Telecom",
+        "role": "Data Analyst and Developer",
+        "period": "Sep/2026 — Present",
+        "tasks": [
+          "Indicator automation with n8n, integrating internal systems and databases",
+          "Development of a presentation API for a department to consolidate and present its indicators",
+          "Creation of an API for finding and tracking public procurement opportunities",
+          "Development of internal solutions with Synfone",
+          "Web scraping for data collection and structuring",
+          "Dashboards and analysis built with Power BI"
+        ]
+      },
+      {
         "company": "Eficiência Fiscal",
         "role": "Mid-Level Full Stack Developer",
         "period": "Sep/2023 — Jun/2026",
@@ -266,8 +283,9 @@
   "education": {
     "tag": "Education",
     "title": "Education &",
-    "titleHighlight": "Certifications",
+    "titleHighlight": "Research",
     "academicTitle": "Academic Background",
+    "projectsTitle": "Research and Extension",
     "certificationsTitle": "Certifications",
     "items": [
       {
@@ -284,6 +302,20 @@
         "title": "Advanced English",
         "institution": "SEDA College Online",
         "status": "Completed"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Solos Digital",
+        "type": "Research and Extension Project",
+        "role": "Backend Developer",
+        "period": "Jun/2026 — Present",
+        "description": "Backend work across the project lifecycle, from API development to production delivery.",
+        "tasks": [
+          "Development of the project API",
+          "Deployment setup and monitoring",
+          "CI/CD pipeline implementation and maintenance"
+        ]
       }
     ],
     "certifications": [

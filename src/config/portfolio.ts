@@ -4,7 +4,7 @@ export const portfolioConfig = {
   links: {
     github: "https://github.com/Fimaciel",
     linkedin: "https://linkedin.com/in/filipe-maciel-lopes-221256267",
-    email: "mailto:filipe.maciel.lopes13@gmail.com",
+    email: "mailto:filipemaciellopes01@gmail.com",
   },
   resumes: {
     pt: "/curriculo-pt.pdf",

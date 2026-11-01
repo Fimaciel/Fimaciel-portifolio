@@ -28,6 +28,15 @@ export interface EducationItem {
   status: string;
 }
 
+export interface AcademicProjectItem {
+  name: string;
+  type: string;
+  role: string;
+  period: string;
+  description: string;
+  tasks: string[];
+}
+
 export interface CertificationItem {
   title: string;
   issuer: string;
